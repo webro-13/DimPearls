@@ -7,17 +7,14 @@ import com.rocco.dimpearls.item.DirtPearlItem;
 import com.rocco.dimpearls.item.NetherPearlItem;
 import com.rocco.dimpearls.item.EndPearlItem;
 
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.item.ItemStack;
+
 
 @Mod(DimPearls.MODID)
 public class DimPearls {

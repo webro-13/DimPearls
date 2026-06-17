@@ -2,19 +2,24 @@
   "ultrawarm": false,
   "natural": false,
   "coordinate_scale": 1.0,
+
   "bed_works": false,
   "respawn_anchor_works": false,
+
   "has_skylight": false,
   "has_ceiling": false,
+
   "piglin_safe": false,
   "has_raids": false,
 
   "has_ender_dragon_fight": false,
 
-  "monster_spawn_light_level": 0,
-  "monster_spawn_block_light_limit": 0,
+  "monster_spawn_light_level": 15,
+  "monster_spawn_block_light_limit": 15,
 
   "effects": "minecraft:the_end",
+
+  "ambient_light": 0.3,
 
   "min_y": 0,
   "height": 256,

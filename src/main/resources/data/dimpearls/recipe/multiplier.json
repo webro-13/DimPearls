@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:diamond",
+    "dimpearls:between_crystal"
+  ],
+  "result": {
+    "id": "minecraft:diamond",
+    "count": 6
+  }
+}

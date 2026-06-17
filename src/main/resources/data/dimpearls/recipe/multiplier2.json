@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:ancient_debris",
+    "dimpearls:between_crystal"
+  ],
+  "result": {
+    "id": "minecraft:ancient_debris",
+    "count": 4
+  }
+}

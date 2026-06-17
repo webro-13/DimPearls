@@ -6,6 +6,7 @@ import com.mojang.logging.LogUtils;
 import com.rocco.dimpearls.item.DirtPearlItem;
 import com.rocco.dimpearls.item.NetherPearlItem;
 import com.rocco.dimpearls.item.EndPearlItem;
+import com.rocco.dimpearls.item.VoidPearlItem;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -45,6 +46,14 @@ public class DimPearls {
         .durability(32)
     );
 
+    public static final DeferredItem<VoidPearlItem> VOID_PEARL =
+    ITEMS.registerItem(
+        "void_pearl",
+        VoidPearlItem::new,
+        () -> new Item.Properties().stacksTo(1)
+        .durability(8)
+    );
+
     public static final DeferredItem<NetherPearlItem> NETHER_PEARL =
     ITEMS.registerItem(
         "nether_pearl",
@@ -66,7 +75,8 @@ public static final DeferredBlock<Block> BETWEEN_STONE =
         "between_stone",
         Block::new,
         () -> BlockBehaviour.Properties.of()
-            .destroyTime(10.0F)
+            .destroyTime(7.0F)
+            .requiresCorrectToolForDrops()
     );
     
     public static final DeferredItem<BlockItem> BETWEEN_STONE_ITEM =
@@ -82,7 +92,9 @@ public static final DeferredBlock<Block> BETWEEN_STONE =
         () -> BlockBehaviour.Properties.of()
             .destroyTime(4.0F)
             .noCollision()
-            .lightLevel(state -> 15)
+            .lightLevel(state -> 10)
+            .destroyTime(7.0F)
+            .requiresCorrectToolForDrops()
     );
     
     public static final DeferredItem<BlockItem> BETWEEN_CRYSTAL_ITEM =
@@ -104,6 +116,7 @@ public static final DeferredBlock<Block> BETWEEN_STONE =
             event.accept(DIRT_PEARL);
             event.accept(NETHER_PEARL);
         event.accept(END_PEARL);
+        event.accept(VOID_PEARL);
         event.accept(BETWEEN_STONE_ITEM);
         event.accept(BETWEEN_CRYSTAL_ITEM);
         }

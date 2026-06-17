@@ -7,12 +7,13 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.chunk.LevelChunk;
-
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.level.ChunkEvent;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
+import net.minecraft.core.registries.Registries;
 
 @EventBusSubscriber(modid = DimPearls.MODID)
 public class BetweenTerrainHandler
@@ -25,25 +26,28 @@ public class BetweenTerrainHandler
         if (!(level instanceof ServerLevel serverLevel))
             return;
 
-        // Only generate in The Between
-        if (!serverLevel.dimension().location().toString().equals("dimpearls:the_between"))
+        ResourceKey<Level> betweenKey = ResourceKey.create(Registries.DIMENSION, 
+    Identifier.fromNamespaceAndPath(DimPearls.MODID, "the_between"));
+
+        // Only run in The Between
+        if (!serverLevel.dimension().equals(betweenKey))
             return;
 
         LevelChunk chunk = (LevelChunk) event.getChunk();
 
         ChunkPos chunkPos = chunk.getPos();
 
-        // Deterministic random
-        RandomSource random = RandomSource.create(
-            chunkPos.x * 341873128712L +
-            chunkPos.z * 132897987541L
-        );
+        // Stable deterministic random
+        RandomSource random =
+            RandomSource.create(chunkPos.hashCode());
 
         generatePillars(serverLevel, chunkPos, random);
 
         generateCrystalPatches(serverLevel, chunkPos, random);
 
-        generateFloatingIslands(serverLevel, chunkPos, random);
+        generateVoidPit(serverLevel, chunkPos, random);
+
+        generateIsland(serverLevel, chunkPos, random);
     }
 
     private static void generatePillars(
@@ -52,38 +56,49 @@ public class BetweenTerrainHandler
         RandomSource random
     )
     {
-        for (int i = 0; i < 6; i++)
+        // 20% chance per chunk
+        if (random.nextFloat() > 0.2F)
+            return;
+
+        int x = chunkPos.getMiddleBlockX();
+
+        int z = chunkPos.getMiddleBlockZ();
+
+        int baseY = 45 + random.nextInt(15);
+
+        int height = 15 + random.nextInt(25);
+
+        int radius = 2 + random.nextInt(3);
+
+for (int y = baseY; y < baseY + height; y++)
+{
+    int currentRadius = Math.max(
+        1,
+        radius - ((y - baseY) / 10)
+    );
+
+    for (int dx = -currentRadius; dx <= currentRadius; dx++)
+    {
+        for (int dz = -currentRadius; dz <= currentRadius; dz++)
         {
-            int x = chunkPos.getMinBlockX() + random.nextInt(16);
-            int z = chunkPos.getMinBlockZ() + random.nextInt(16);
-
-            int baseY = 45 + random.nextInt(20);
-
-            int height = 20 + random.nextInt(40);
-
-            int radius = 1 + random.nextInt(3);
-
-            for (int y = baseY; y < baseY + height; y++)
+            if (dx * dx + dz * dz <= currentRadius * currentRadius)
             {
-                for (int dx = -radius; dx <= radius; dx++)
-                {
-                    for (int dz = -radius; dz <= radius; dz++)
-                    {
-                        BlockPos pos = new BlockPos(
-                            x + dx,
-                            y,
-                            z + dz
-                        );
+                BlockPos pos = new BlockPos(
+                    x + dx,
+                    y,
+                    z + dz
+                );
 
-                        level.setBlock(
-                            pos,
-                            DimPearls.BETWEEN_STONE.get().defaultBlockState(),
-                            3
-                        );
-                    }
-                }
+                level.setBlock(
+                    pos,
+                    DimPearls.BETWEEN_STONE.get()
+                        .defaultBlockState(),
+                    2
+                );
             }
         }
+    }
+}
     }
 
     private static void generateCrystalPatches(
@@ -92,13 +107,19 @@ public class BetweenTerrainHandler
         RandomSource random
     )
     {
-        for (int i = 0; i < 20; i++)
+        int count = 2 + random.nextInt(3);
+
+        for (int i = 0; i < count; i++)
         {
-            int x = chunkPos.getMinBlockX() + random.nextInt(16);
+            int x =
+                chunkPos.getMinBlockX()
+                + random.nextInt(16);
 
-            int z = chunkPos.getMinBlockZ() + random.nextInt(16);
+            int z =
+                chunkPos.getMinBlockZ()
+                + random.nextInt(16);
 
-            int y = 50 + random.nextInt(30);
+            int y = 50 + random.nextInt(20);
 
             BlockPos pos = new BlockPos(x, y, z);
 
@@ -106,77 +127,110 @@ public class BetweenTerrainHandler
             {
                 level.setBlock(
                     pos,
-                    DimPearls.BETWEEN_CRYSTAL.get().defaultBlockState(),
-                    3
+                    DimPearls.BETWEEN_CRYSTAL.get()
+                        .defaultBlockState(),
+                    2
                 );
             }
         }
     }
 
-    private static void generateFloatingIslands(
-        ServerLevel level,
-        ChunkPos chunkPos,
-        RandomSource random
-    )
+    private static void generateVoidPit(
+    ServerLevel level,
+    ChunkPos chunkPos,
+    RandomSource random
+)
+{
+    // rare
+    if (random.nextFloat() > 0.08F)
+        return;
+
+    int centerX =
+        chunkPos.getMinBlockX()
+        + random.nextInt(16);
+
+    int centerZ =
+        chunkPos.getMinBlockZ()
+        + random.nextInt(16);
+
+    int radius = 8 + random.nextInt(10);
+
+    for (int x = -radius; x <= radius; x++)
     {
-        // Rare islands
-        if (random.nextFloat() > 0.03F)
-            return;
-
-        int centerX = chunkPos.getMiddleBlockX();
-
-        int centerZ = chunkPos.getMiddleBlockZ();
-
-        int centerY = 70 + random.nextInt(25);
-
-        int radius = 10 + random.nextInt(15);
-
-        for (int dx = -radius; dx <= radius; dx++)
+        for (int z = -radius; z <= radius; z++)
         {
-            for (int dz = -radius; dz <= radius; dz++)
+            double dist = Math.sqrt(x * x + z * z);
+
+            if (dist <= radius)
             {
-                double dist = Math.sqrt(dx * dx + dz * dz);
-
-                if (dist > radius)
-                    continue;
-
-                int height =
-                    (int)((radius - dist) * 0.8);
-
-                for (int dy = -height; dy <= 0; dy++)
+                for (int y = 0; y < 120; y++)
                 {
                     BlockPos pos = new BlockPos(
-                        centerX + dx,
-                        centerY + dy,
-                        centerZ + dz
+                        centerX + x,
+                        y,
+                        centerZ + z
                     );
 
                     level.setBlock(
                         pos,
-                        DimPearls.BETWEEN_STONE.get().defaultBlockState(),
-                        3
+                        net.minecraft.world.level.block.Blocks.AIR
+                            .defaultBlockState(),
+                        2
                     );
-                }
-
-                // Void ring
-                if (dist > radius - 2)
-                {
-                    for (int dy = -4; dy <= 4; dy++)
-                    {
-                        BlockPos airPos = new BlockPos(
-                            centerX + dx,
-                            centerY + dy,
-                            centerZ + dz
-                        );
-
-                        level.setBlock(
-                            airPos,
-                            Blocks.AIR.defaultBlockState(),
-                            3
-                        );
-                    }
                 }
             }
         }
     }
+}
+
+private static void generateIsland(
+    ServerLevel level,
+    ChunkPos chunkPos,
+    RandomSource random
+)
+{
+    if (random.nextFloat() > 0.05F)
+        return;
+
+    int centerX =
+        chunkPos.getMiddleBlockX();
+
+    int centerZ =
+        chunkPos.getMiddleBlockZ();
+
+    int centerY = 90 + random.nextInt(40);
+
+    int radius = 6 + random.nextInt(8);
+
+    for (int x = -radius; x <= radius; x++)
+    {
+        for (int z = -radius; z <= radius; z++)
+        {
+            for (int y = -radius / 2; y <= radius / 2; y++)
+            {
+                double dist =
+                    (x * x)
+                    + (z * z)
+                    + (y * y * 2);
+
+                if (dist <= radius * radius)
+                {
+                    BlockPos pos = new BlockPos(
+                        centerX + x,
+                        centerY + y,
+                        centerZ + z
+                    );
+
+                    level.setBlock(
+                        pos,
+                        DimPearls.BETWEEN_STONE.get()
+                            .defaultBlockState(),
+                        2
+                    );
+                }
+            }
+        }
+    }
+}
+
 }

@@ -1,18 +1,14 @@
 {
   "type": "dimpearls:the_between_type",
+
   "generator": {
-    "type": "minecraft:flat",
-    "settings": {
-      "layers": [
-        {
-          "height": 15,
-          "block": "dimpearls:between_stone"
-        }
-      ],
-      "biome_source": {
-  "type": "minecraft:fixed",
-  "biome": "dimpearls:the_between"
-}
-    }
+    "type": "minecraft:noise",
+
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "dimpearls:the_between"
+    },
+
+    "settings": "dimpearls:the_between"
   }
 }

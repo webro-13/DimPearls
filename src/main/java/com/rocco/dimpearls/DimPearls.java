@@ -75,7 +75,7 @@ public static final DeferredBlock<Block> BETWEEN_STONE =
         "between_stone",
         Block::new,
         () -> BlockBehaviour.Properties.of()
-            .destroyTime(7.0F)
+            .destroyTime(5.0F)
             .requiresCorrectToolForDrops()
     );
     
@@ -92,7 +92,7 @@ public static final DeferredBlock<Block> BETWEEN_STONE =
         () -> BlockBehaviour.Properties.of()
             .destroyTime(4.0F)
             .noCollision()
-            .lightLevel(state -> 10)
+            .lightLevel(state -> 12)
             .destroyTime(7.0F)
             .requiresCorrectToolForDrops()
     );

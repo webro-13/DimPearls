@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "dimpearls:between_stone" 
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

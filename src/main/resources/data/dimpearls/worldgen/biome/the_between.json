@@ -8,8 +8,7 @@
     "water_color": 4159204,
     "water_fog_color": 329011,
     "sky_color": 0,
-
-    "ambient_light": 0.1
+    "ambient_light": 0.01
   },
 
   "creature_spawn_probability": 0.0,

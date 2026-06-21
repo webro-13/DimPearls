@@ -28,8 +28,9 @@ public DirtPearlItem(Properties properties) {
 
 public InteractionResult use(Level level, Player player, InteractionHand hand) {
 
-    if (!(player instanceof ServerPlayer serverPlayer))
+    if (!(player instanceof ServerPlayer serverPlayer)){
         return InteractionResult.PASS;
+    }
 
     if (player.isShiftKeyDown()) {
 
@@ -54,12 +55,17 @@ public InteractionResult use(Level level, Player player, InteractionHand hand) {
     ResourceKey<Level> dimensionKey = ResourceKey.create(Registries.DIMENSION, 
     Identifier.fromNamespaceAndPath("minecraft", "overworld")); 
 
+    ResourceKey<Level> playerDim = player.level().dimension();
+
     ServerLevel overworld = serverPlayer.level().getServer().getLevel(dimensionKey);
 
-    if (overworld == null)
+    if (overworld == null){
         return InteractionResult.FAIL;
+    }
 
-    serverPlayer.teleportTo(
+    if(playerDim != dimensionKey){
+        
+        serverPlayer.teleportTo(
         overworld,
         pos.getX() + 0.5,
         pos.getY(),
@@ -79,4 +85,5 @@ stack.setDamageValue(stack.getDamageValue() + 1);
 }
 
 
+}
 }

@@ -1,9 +1,7 @@
 package com.rocco.dimpearls.item;
 
-import com.rocco.dimpearls.data.PearlData;
-import net.minecraft.core.BlockPos;
+
 import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
@@ -34,6 +32,8 @@ public InteractionResult use(Level level, Player player, InteractionHand hand) {
     ResourceKey<Level> dimensionKey = ResourceKey.create(Registries.DIMENSION, 
     Identifier.fromNamespaceAndPath("dimpearls", "the_between")); 
 
+    ResourceKey<Level> playerDim = player.level().dimension();
+
     ServerLevel between = serverPlayer.level().getServer().getLevel(dimensionKey);
 
     if (between == null)
@@ -42,6 +42,8 @@ public InteractionResult use(Level level, Player player, InteractionHand hand) {
     double x = 0;
     double y = 64;
     double z = 0;
+
+    if(dimensionKey != playerDim){
 
     serverPlayer.teleportTo(
         between,
@@ -60,6 +62,7 @@ ItemStack stack = player.getItemInHand(hand);
 stack.setDamageValue(stack.getDamageValue() + 1);
 
     return InteractionResult.SUCCESS;
+}
 }
 
 

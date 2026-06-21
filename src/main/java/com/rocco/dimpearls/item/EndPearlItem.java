@@ -53,15 +53,20 @@ public InteractionResult use(Level level, Player player, InteractionHand hand) {
         return InteractionResult.SUCCESS;
     }
 
-    ResourceKey<Level> dimensionKey = ResourceKey.create(Registries.DIMENSION, 
+        ResourceKey<Level> dimensionKey = ResourceKey.create(Registries.DIMENSION, 
     Identifier.fromNamespaceAndPath("minecraft", "the_end")); 
+
+    ResourceKey<Level> playerDim = player.level().dimension();
 
     ServerLevel end = serverPlayer.level().getServer().getLevel(dimensionKey);
 
-    if (end == null)
+    if (end == null){
         return InteractionResult.FAIL;
+    }
 
-    serverPlayer.teleportTo(
+    if(playerDim != dimensionKey){
+        
+        serverPlayer.teleportTo(
         end,
         pos.getX() + 0.5,
         pos.getY(),
@@ -71,13 +76,13 @@ public InteractionResult use(Level level, Player player, InteractionHand hand) {
         serverPlayer.getXRot(),
         true
     );
-    
-    serverPlayer.getCooldowns().addCooldown(player.getItemInHand(hand), 200);
 
-    ItemStack stack = player.getItemInHand(hand);
+    serverPlayer.getCooldowns().addCooldown(player.getItemInHand(hand), 100);
+
+ItemStack stack = player.getItemInHand(hand);
 stack.setDamageValue(stack.getDamageValue() + 1);
 
     return InteractionResult.SUCCESS;
 }
-
+}
 }

@@ -55,12 +55,17 @@ public InteractionResult use(Level level, Player player, InteractionHand hand) {
     ResourceKey<Level> dimensionKey = ResourceKey.create(Registries.DIMENSION, 
     Identifier.fromNamespaceAndPath("minecraft", "the_nether")); 
 
+    ResourceKey<Level> playerDim = player.level().dimension();
+
     ServerLevel nether = serverPlayer.level().getServer().getLevel(dimensionKey);
 
-    if (nether == null)
+    if (nether == null){
         return InteractionResult.FAIL;
+    }
 
-    serverPlayer.teleportTo(
+    if(playerDim != dimensionKey){
+        
+        serverPlayer.teleportTo(
         nether,
         pos.getX() + 0.5,
         pos.getY(),
@@ -72,10 +77,11 @@ public InteractionResult use(Level level, Player player, InteractionHand hand) {
     );
 
     serverPlayer.getCooldowns().addCooldown(player.getItemInHand(hand), 100);
-    ItemStack stack = player.getItemInHand(hand);
+
+ItemStack stack = player.getItemInHand(hand);
 stack.setDamageValue(stack.getDamageValue() + 1);
 
     return InteractionResult.SUCCESS;
 }
-
+}
 }

@@ -28,11 +28,16 @@ public NetherPearlItem(Properties properties) {
 
 @Override
 public InteractionResult use(Level level, Player player, InteractionHand hand) {
+    
+    ResourceKey<Level> dimensionKey = ResourceKey.create(Registries.DIMENSION, 
+    Identifier.fromNamespaceAndPath("minecraft", "the_nether")); 
+
+    ResourceKey<Level> playerDim = player.level().dimension();
 
     if (!(player instanceof ServerPlayer serverPlayer))
         return InteractionResult.PASS;
 
-    if (player.isShiftKeyDown()) {
+    if (player.isShiftKeyDown() && player.level().dimension() == dimensionKey) {
 
         PearlData.saveLocation(serverPlayer, "nether");
 
@@ -52,10 +57,7 @@ public InteractionResult use(Level level, Player player, InteractionHand hand) {
         return InteractionResult.SUCCESS;
     }
 
-    ResourceKey<Level> dimensionKey = ResourceKey.create(Registries.DIMENSION, 
-    Identifier.fromNamespaceAndPath("minecraft", "the_nether")); 
-
-    ResourceKey<Level> playerDim = player.level().dimension();
+    
 
     ServerLevel nether = serverPlayer.level().getServer().getLevel(dimensionKey);
 

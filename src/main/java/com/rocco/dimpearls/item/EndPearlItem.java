@@ -84,5 +84,8 @@ stack.setDamageValue(stack.getDamageValue() + 1);
 
     return InteractionResult.SUCCESS;
 }
+
+return InteractionResult.SUCCESS;
+
 }
 }

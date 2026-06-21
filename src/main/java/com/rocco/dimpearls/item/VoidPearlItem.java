@@ -61,8 +61,12 @@ public InteractionResult use(Level level, Player player, InteractionHand hand) {
 ItemStack stack = player.getItemInHand(hand);
 stack.setDamageValue(stack.getDamageValue() + 1);
 
+
     return InteractionResult.SUCCESS;
-}
+    }
+
+    // If player is already in the Between dimension, do nothing
+    return InteractionResult.SUCCESS;
 }
 
 

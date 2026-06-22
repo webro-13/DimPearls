@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:end_pearl",
+    "dimpearls:between_crystal"
+  ],
+  "result": {
+    "id": "minecraft:end_pearl",
+    "count": 3
+  }
+}

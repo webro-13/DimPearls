@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:experience_bottle",
+    "dimpearls:between_crystal"
+  ],
+  "result": {
+    "id": "minecraft:experience_bottle",
+    "count": 3
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:phantom_membrane",
+    "dimpearls:between_crystal"
+  ],
+  "result": {
+    "id": "minecraft:phantom_membrane",
+    "count": 3
+  }
+}

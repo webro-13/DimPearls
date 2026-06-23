@@ -60,6 +60,9 @@ public InteractionResult use(Level level, Player player, InteractionHand hand) {
 
 ItemStack stack = player.getItemInHand(hand);
 stack.setDamageValue(stack.getDamageValue() + 1);
+if (stack.getDamageValue() >= stack.getMaxDamage()) {
+    stack.shrink(1);
+}
 
 
     return InteractionResult.SUCCESS;

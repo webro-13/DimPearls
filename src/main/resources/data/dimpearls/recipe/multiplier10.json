@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "minecraft:ender_pearl",
+    "minecraft:obsidian",
     "dimpearls:between_crystal"
   ],
   "result": {
-    "id": "minecraft:ender_pearl",
+    "id": "minecraft:obsidian",
     "count": 3
   }
 }

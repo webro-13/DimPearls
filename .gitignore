@@ -13,6 +13,6 @@ run/
 **/src/generated/**/.cache/
 repo/
 !**/src/**/repo/
-bin
-gradle
-
+bin/
+gradle/
+.eclipse/

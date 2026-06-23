@@ -2,9 +2,9 @@
 	"format_version": "26.1.2",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "between_crystal",
-		"1": "knob",
-		"particle": "between_crystal"
+		"0": "dimpearls:blocks/between_crystal",
+		"1": "dimpearls:blocks/knob",
+		"particle": "dimpearls:blocks/between_crystal"
 	},
 	"elements": [
 		{

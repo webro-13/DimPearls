@@ -4,29 +4,59 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 
-public class PearlData {
-
-    public static void saveLocation(ServerPlayer player, String key) {
+public class PearlData
+{
+    public static void saveLocation(
+        ServerPlayer player,
+        String key
+    )
+    {
         CompoundTag data = player.getPersistentData();
 
-        BlockPos pos = player.blockPosition();
+        CompoundTag location = new CompoundTag();
 
-        data.putInt(key + "_x", pos.getX());
-        data.putInt(key + "_y", pos.getY());
-        data.putInt(key + "_z", pos.getZ());
+        location.putInt(
+            "x",
+            player.blockPosition().getX()
+        );
+
+        location.putInt(
+            "y",
+            player.blockPosition().getY()
+        );
+
+        location.putInt(
+            "z",
+            player.blockPosition().getZ()
+        );
+
+        data.put(key, location);
     }
 
-    public static BlockPos getLocation(ServerPlayer player, String key) {
-        CompoundTag data = player.getPersistentData();
+public static BlockPos getLocation(
+    ServerPlayer player,
+    String key
+)
+{
+    CompoundTag data = player.getPersistentData();
 
-        if (!data.contains(key + "_x")) {
-            return null;
-        }
+    if (!data.contains(key))
+    {
+        return null;
+    }
 
-        return new BlockPos(
-    data.getInt(key + "_x").orElse(0),
-    data.getInt(key + "_y").orElse(0),
-    data.getInt(key + "_z").orElse(0)
+    CompoundTag location =
+        data.getCompound(key).orElse(null);
+
+    if (location == null)
+    {
+        return null;
+    }
+
+    return new BlockPos(
+    location.getInt("x").orElse(0),
+    location.getInt("y").orElse(0),
+    location.getInt("z").orElse(0)
 );
-    }
+}
 }

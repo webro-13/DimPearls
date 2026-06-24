@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "minecraft:firework_rocket",
+    "minecraft:emerald",
     "dimpearls:between_crystal"
   ],
   "result": {
-    "id": "minecraft:firework_rocket",
-    "count": 3
+    "id": "minecraft:emerald",
+    "count": 4
   }
 }

@@ -23,7 +23,10 @@ private boolean unstableAggro = false;
         Level level
     )
     {
+        
         super(type, level);
+        
+        this.xpReward = 12;
     }
     
     public boolean isLookingAtMe(Player player)

@@ -15,7 +15,16 @@
 
   "spawn_costs": {},
 
-  "spawners": {},
+  "spawners": {
+  "monster": [
+    {
+      "type": "dimpearls:decayed_enderman",
+      "weight": 11,
+      "minCount": 1,
+      "maxCount": 1
+    }
+  ]
+},
 
   "carvers": [],
 

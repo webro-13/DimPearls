@@ -19,7 +19,7 @@
   "monster": [
     {
       "type": "dimpearls:decayed_enderman",
-      "weight": 11,
+      "weight": 9,
       "minCount": 1,
       "maxCount": 1
     }

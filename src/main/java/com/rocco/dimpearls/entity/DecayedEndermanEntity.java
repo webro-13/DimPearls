@@ -64,17 +64,17 @@ private boolean unstableAggro = false;
         16
     );
 
-if (
-    targetPlayer != null &&
-    targetPlayer.getHealth() <= 6.0F
-)
-{
-    setTarget(null);
+// if (
+//     targetPlayer != null &&
+//     targetPlayer.getHealth() <= 6.0F
+// )
+// {
+//     setTarget(null);
 
-    unstableAggro = false;
+//     unstableAggro = false;
 
-    navigation.stop();
-}
+//     navigation.stop();
+// }
 
         long time = level().getGameTime();
 
@@ -89,7 +89,7 @@ if (
                 Player player =
                     level().getNearestPlayer(
                         this,
-                        16
+                        11
                     );
 
                 if (
@@ -107,27 +107,28 @@ else
 }
                 }
             }
-            else
-            {
-                setTarget(null);
+        //     else
+        //     {
+        //         setTarget(null);
 
-                setLastHurtByMob(null);
+        //         setLastHurtByMob(null);
 
-                navigation.stop();
+        //         navigation.stop();
                 
-            }
-        }
-        if (!unstableAggro)
-{
-    setTarget(null);
+        //     }
+        // }
 
-    navigation.stop();
+// if (!unstableAggro)
+// {
+//     setTarget(null);
 
-    if (getTarget() != null)
-    {
-        setTarget(null);
-    }
-}
+//     navigation.stop();
+
+//     if (getTarget() != null)
+//     {
+//         setTarget(null);
+//     }
+// }
 
 if (level().getMaxLocalRawBrightness(blockPosition()) > 8)
 {
@@ -150,8 +151,9 @@ if (random.nextInt(200) == 0)
 {
     navigation.stop();
 }
-}
 
+}
+}
     
 protected boolean teleport()
 {

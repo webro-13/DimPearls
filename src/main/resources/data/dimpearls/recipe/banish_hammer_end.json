@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "weapons",
+  "ingredients": [
+    "dimpearls:end_pearl",
+    "minecraft:mace"
+  ],
+  "result": {
+    "id": "dimpearls:banish_hammer",
+    "count": 1
+  }
+}

@@ -3,6 +3,10 @@
   "item.dimpearls.nether_pearl": "Nether Pearl",
   "item.dimpearls.end_pearl": "END Pearl",
   "item.dimpearls.void_pearl": "Void Pearl",
+  "item.dimpearls.end_hammer": "End Hammer",
+  "item.dimpearls.void_hammer": "Void Hammer",
+  "item.dimpearls.nether_hammer": "Nether Hammer",
+  "item.dimpearls.dirt_hammer": "Dirt Hammer",
   "block.dimpearls.between_stone": "Between Stone",
   "block.dimpearls.between_crystal": "Between Crystal"
 }

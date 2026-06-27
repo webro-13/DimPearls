@@ -7,6 +7,7 @@ import com.rocco.dimpearls.item.DirtPearlItem;
 import com.rocco.dimpearls.item.NetherPearlItem;
 import com.rocco.dimpearls.item.EndPearlItem;
 import com.rocco.dimpearls.item.VoidPearlItem;
+import com.rocco.dimpearls.item.BanishHammerItem;
 import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -85,6 +86,58 @@ public class DimPearls {
         () -> new Item.Properties().stacksTo(1)
         .durability(16)
     );
+
+public static final DeferredItem<Item>
+END_HAMMER =
+    ITEMS.registerItem(
+        "end_hammer",
+        properties ->
+            new BanishHammerItem(
+                properties,
+                "minecraft:the_end"
+            ),
+        () -> new Item.Properties()
+            .durability(275)
+    );
+
+    public static final DeferredItem<Item>
+NETHER_HAMMER =
+    ITEMS.registerItem(
+        "nether_hammer",
+        properties ->
+            new BanishHammerItem(
+                properties,
+                "minecraft:the_nether"
+            ),
+        () -> new Item.Properties()
+            .durability(275)
+    );
+
+    public static final DeferredItem<Item>
+DIRT_HAMMER =
+    ITEMS.registerItem(
+        "dirt_hammer",
+        properties ->
+            new BanishHammerItem(
+                properties,
+                "minecraft:overworld"
+            ),
+        () -> new Item.Properties()
+            .durability(275)
+    );
+
+        public static final DeferredItem<Item>
+VOID_HAMMER =
+    ITEMS.registerItem(
+        "void_hammer",
+        properties ->
+            new BanishHammerItem(
+                properties,
+                "dimpearls:the_between"
+            ),
+        () -> new Item.Properties()
+            .durability(275)
+    );
     
 public static final DeferredBlock<Block> BETWEEN_STONE =
     BLOCKS.registerBlock(
@@ -159,6 +212,10 @@ public static final DeferredHolder<
         event.accept(VOID_PEARL);
         event.accept(BETWEEN_STONE_ITEM);
         event.accept(BETWEEN_CRYSTAL_ITEM);
+        event.accept(VOID_HAMMER);
+        event.accept(DIRT_HAMMER);
+        event.accept(NETHER_HAMMER);
+        event.accept(END_HAMMER);
         }
     }
 

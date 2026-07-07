@@ -1,0 +1,86 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:painting": 11,
+      "minecraft:warden_spawn_egg": 4,
+      "minecraft:repeater": 18,
+      "minecraft:netherite_sword": 21,
+      "minecraft:redstone": 117,
+      "dimpearls:betweenstone": 315,
+      "minecraft:creeper_spawn_egg": 163,
+      "minecraft:cobblestone": 7,
+      "minecraft:structure_block": 14,
+      "minecraft:hopper": 1,
+      "minecraft:structure_void": 3,
+      "dimpearls:between_crystal": 209,
+      "minecraft:redstone_torch": 4,
+      "minecraft:oak_sign": 2,
+      "minecraft:flint_and_steel": 3,
+      "dimpearls:herobrine_spawn_egg": 75,
+      "minecraft:creeper_head": 10,
+      "minecraft:zombie_spawn_egg": 72,
+      "minecraft:jukebox": 5,
+      "minecraft:dropper": 2
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 63,
+      "minecraft:inspect_dropper": 9,
+      "minecraft:walk_one_cm": 216861,
+      "minecraft:leave_game": 18,
+      "minecraft:mob_kills": 11,
+      "minecraft:damage_taken": 1939,
+      "minecraft:play_time": 98823,
+      "minecraft:damage_dealt": 1987,
+      "minecraft:jump": 336,
+      "minecraft:time_since_death": 36,
+      "minecraft:play_record": 4,
+      "minecraft:sprint_one_cm": 111842,
+      "minecraft:inspect_hopper": 17,
+      "minecraft:fall_one_cm": 4600,
+      "minecraft:total_world_time": 113015,
+      "minecraft:fly_one_cm": 562093,
+      "minecraft:crouch_one_cm": 1574,
+      "minecraft:sneak_time": 1507,
+      "minecraft:deaths": 8
+    },
+    "minecraft:mined": {
+      "minecraft:fire": 6
+    },
+    "minecraft:killed": {
+      "minecraft:zombie": 3,
+      "dimpearls:herobrine": 7,
+      "minecraft:creeper": 1
+    },
+    "minecraft:picked_up": {
+      "minecraft:creeper_spawn_egg": 5,
+      "dimpearls:herobrine_spawn_egg": 4,
+      "minecraft:dropper": 1,
+      "minecraft:hopper": 6,
+      "minecraft:cobblestone": 3,
+      "minecraft:redstone_torch": 1,
+      "minecraft:painting": 1,
+      "minecraft:redstone": 14,
+      "minecraft:repeater": 3,
+      "minecraft:zombie_spawn_egg": 5,
+      "minecraft:rotten_flesh": 20,
+      "minecraft:structure_block": 7,
+      "minecraft:oak_sign": 1,
+      "dimpearls:between_crystal": 1,
+      "minecraft:music_disc_lava_chicken": 19,
+      "dimpearls:betweenstone": 7,
+      "minecraft:sculk_catalyst": 11,
+      "minecraft:jukebox": 4,
+      "minecraft:creeper_head": 5,
+      "minecraft:warden_spawn_egg": 4,
+      "minecraft:sandstone": 411,
+      "minecraft:lava_bucket": 1,
+      "minecraft:gunpowder": 80,
+      "minecraft:netherite_sword": 3
+    },
+    "minecraft:killed_by": {
+      "minecraft:creeper": 2,
+      "dimpearls:herobrine": 2
+    }
+  },
+  "DataVersion": 4790
+}

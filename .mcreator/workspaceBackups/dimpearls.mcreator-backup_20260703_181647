@@ -1,0 +1,1111 @@
+{
+  "mod_elements": [
+    {
+      "name": "DirtPearl",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dirt_pearl",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dimpearls/items/dirt_pearl.json",
+          "src/main/resources/assets/dimpearls/models/item/dirt_pearl.json",
+          "src/main/java/com/rocco/dimpearls/item/DirtPearlItem.java"
+        ]
+      },
+      "path": "~/pearls/items"
+    },
+    {
+      "name": "NetherPearlCheckTp",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_pearl_check_tp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/rocco/dimpearls/procedures/NetherPearlCheckTpProcedure.java"
+        ]
+      },
+      "path": "~/pearls/functions"
+    },
+    {
+      "name": "DirtPearlCheckTp",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dirt_pearl_check_tp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/rocco/dimpearls/procedures/DirtPearlCheckTpProcedure.java"
+        ]
+      },
+      "path": "~/pearls/functions"
+    },
+    {
+      "name": "EndPearlCheckTp",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "end_pearl_check_tp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/rocco/dimpearls/procedures/EndPearlCheckTpProcedure.java"
+        ]
+      },
+      "path": "~/pearls/functions"
+    },
+    {
+      "name": "NetherPearl",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_pearl",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dimpearls/models/item/nether_pearl.json",
+          "src/main/java/com/rocco/dimpearls/item/NetherPearlItem.java",
+          "src/main/resources/assets/dimpearls/items/nether_pearl.json"
+        ]
+      },
+      "path": "~/pearls/items"
+    },
+    {
+      "name": "EndPearl",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "end_pearl",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dimpearls/items/end_pearl.json",
+          "src/main/java/com/rocco/dimpearls/item/EndPearlItem.java",
+          "src/main/resources/assets/dimpearls/models/item/end_pearl.json"
+        ]
+      },
+      "path": "~/pearls/items"
+    },
+    {
+      "name": "Dimensionitems",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dimension_items",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/gui/builtin"
+    },
+    {
+      "name": "Betweenstone",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "betweenstone",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/loot_table/blocks/betweenstone.json",
+          "src/main/resources/assets/dimpearls/models/item/betweenstone.json",
+          "src/main/java/com/rocco/dimpearls/block/BetweenstoneBlock.java",
+          "src/main/resources/assets/dimpearls/items/betweenstone.json",
+          "src/main/resources/assets/dimpearls/models/block/betweenstone.json",
+          "src/main/resources/assets/dimpearls/blockstates/betweenstone.json"
+        ]
+      },
+      "path": "~/blocks"
+    },
+    {
+      "name": "MultiplierIron",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "multiplier_iron",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/advancement/recipes/multiplier_iron.json",
+          "src/main/resources/data/dimpearls/recipe/iron_multiplier.json"
+        ]
+      },
+      "path": "~/multiplier_recipes"
+    },
+    {
+      "name": "BetweenCrystal",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "between_crystal",
+      "metadata": {
+        "files": [
+          "src/main/java/com/rocco/dimpearls/block/BetweenCrystalBlock.java",
+          "src/main/resources/assets/dimpearls/models/item/between_crystal.json",
+          "src/main/resources/assets/dimpearls/items/between_crystal.json",
+          "src/main/resources/assets/dimpearls/models/block/between_crystal.json",
+          "src/main/resources/assets/dimpearls/blockstates/between_crystal.json",
+          "src/main/resources/data/dimpearls/loot_table/blocks/between_crystal.json"
+        ]
+      },
+      "path": "~/blocks"
+    },
+    {
+      "name": "TheBetween",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_between",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/dimension_type/the_between.json",
+          "src/main/resources/data/dimpearls/dimension/the_between.json"
+        ]
+      },
+      "path": "~/dimension/the_between"
+    },
+    {
+      "name": "BetweenBiome",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "between_biome",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/worldgen/biome/between_biome.json"
+        ]
+      },
+      "path": "~/dimension/biome"
+    },
+    {
+      "name": "BetweenPillar",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "between_pillar",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/worldgen/template_pool/between_pillar.json",
+          "src/main/resources/data/dimpearls/worldgen/structure_set/between_pillar.json",
+          "src/main/resources/data/dimpearls/worldgen/structure/between_pillar.json"
+        ]
+      },
+      "path": "~/dimension/structures"
+    },
+    {
+      "name": "DirtPearlRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dirt_pearl_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/advancement/recipes/dirt_pearl_recipe.json",
+          "src/main/resources/data/dimpearls/recipe/dirt_pearl_recipe.json"
+        ]
+      },
+      "path": "~/pearls/recipes"
+    },
+    {
+      "name": "NetherPearlRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_pearl_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/recipe/nether_pearl_recipe.json",
+          "src/main/resources/data/dimpearls/advancement/recipes/nether_pearl_recipe.json"
+        ]
+      },
+      "path": "~/pearls/recipes"
+    },
+    {
+      "name": "EndPearlRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "end_pearl_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/recipe/end_pearl_recipe.json",
+          "src/main/resources/data/dimpearls/advancement/recipes/end_pearl_recipe.json"
+        ]
+      },
+      "path": "~/pearls/recipes"
+    },
+    {
+      "name": "Betweencrystalblock",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "betweencrystalblock",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/worldgen/structure_set/betweencrystalblock.json",
+          "src/main/resources/data/dimpearls/worldgen/structure/betweencrystalblock.json",
+          "src/main/resources/data/dimpearls/worldgen/template_pool/betweencrystalblock.json"
+        ]
+      },
+      "path": "~/dimension/structures"
+    },
+    {
+      "name": "Betweencrystalcluster",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "betweencrystalcluster",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/worldgen/structure_set/betweencrystalcluster.json",
+          "src/main/resources/data/dimpearls/worldgen/template_pool/betweencrystalcluster.json",
+          "src/main/resources/data/dimpearls/worldgen/structure/betweencrystalcluster.json"
+        ]
+      },
+      "path": "~/dimension/structures"
+    },
+    {
+      "name": "Betweencrystalcluster2",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "betweencrystalcluster_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/worldgen/structure/betweencrystalcluster_2.json",
+          "src/main/resources/data/dimpearls/worldgen/structure_set/betweencrystalcluster_2.json",
+          "src/main/resources/data/dimpearls/worldgen/template_pool/betweencrystalcluster_2.json"
+        ]
+      },
+      "path": "~/dimension/structures"
+    },
+    {
+      "name": "Betweencrystalcluster3",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "betweencrystalcluster_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/worldgen/structure_set/betweencrystalcluster_3.json",
+          "src/main/resources/data/dimpearls/worldgen/structure/betweencrystalcluster_3.json",
+          "src/main/resources/data/dimpearls/worldgen/template_pool/betweencrystalcluster_3.json"
+        ]
+      },
+      "path": "~/dimension/structures"
+    },
+    {
+      "name": "VoidPearl",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_pearl",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dimpearls/items/void_pearl.json",
+          "src/main/java/com/rocco/dimpearls/item/VoidPearlItem.java",
+          "src/main/resources/assets/dimpearls/models/item/void_pearl.json"
+        ]
+      },
+      "path": "~/pearls/items"
+    },
+    {
+      "name": "VoidPearlCheckTp",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_pearl_check_tp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/rocco/dimpearls/procedures/VoidPearlCheckTpProcedure.java"
+        ]
+      },
+      "path": "~/pearls/functions"
+    },
+    {
+      "name": "BanishHammerEndAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banish_hammer_end_attack",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/rocco/dimpearls/procedures/BanishHammerEndAttackProcedure.java"
+        ]
+      },
+      "path": "~/weapons/functions"
+    },
+    {
+      "name": "BanishHammerNether",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banish_hammer_nether",
+      "metadata": {
+        "files": [
+          "src/main/java/com/rocco/dimpearls/item/BanishHammerNetherItem.java",
+          "src/main/resources/assets/dimpearls/items/banish_hammer_nether.json",
+          "src/main/resources/assets/dimpearls/models/item/banish_hammer_nether.json"
+        ]
+      },
+      "path": "~/weapons/items"
+    },
+    {
+      "name": "BanishHammerEnd",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banish_hammer_end",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dimpearls/models/item/banish_hammer_end.json",
+          "src/main/java/com/rocco/dimpearls/item/BanishHammerEndItem.java",
+          "src/main/resources/assets/dimpearls/items/banish_hammer_end.json"
+        ]
+      },
+      "path": "~/weapons/items"
+    },
+    {
+      "name": "BanishHammerNetherAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banish_hammer_nether_attack",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/rocco/dimpearls/procedures/BanishHammerNetherAttackProcedure.java"
+        ]
+      },
+      "path": "~/weapons/functions"
+    },
+    {
+      "name": "BanishHammerDirt",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banish_hammer_dirt",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dimpearls/items/banish_hammer_dirt.json",
+          "src/main/resources/assets/dimpearls/models/item/banish_hammer_dirt.json",
+          "src/main/java/com/rocco/dimpearls/item/BanishHammerDirtItem.java"
+        ]
+      },
+      "path": "~/weapons/items"
+    },
+    {
+      "name": "BanishHammerDirtAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banish_hammer_dirt_attack",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/rocco/dimpearls/procedures/BanishHammerDirtAttackProcedure.java"
+        ]
+      },
+      "path": "~/weapons/functions"
+    },
+    {
+      "name": "DirtHammer",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dirt_hammer",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/recipe/dirt_hammer.json",
+          "src/main/resources/data/dimpearls/advancement/recipes/dirt_hammer.json"
+        ]
+      },
+      "path": "~/weapons/recipes"
+    },
+    {
+      "name": "NetherHammer",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_hammer",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/advancement/recipes/nether_hammer.json",
+          "src/main/resources/data/dimpearls/recipe/nether_hammer.json"
+        ]
+      },
+      "path": "~/weapons/recipes"
+    },
+    {
+      "name": "MultiplierDiamond",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "multiplier_diamond",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/recipe/multiplier_diamond.json",
+          "src/main/resources/data/dimpearls/advancement/recipes/multiplier_diamond.json"
+        ]
+      },
+      "path": "~/multiplier_recipes"
+    },
+    {
+      "name": "MultiplierNetherite",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "multiplier_netherite",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/advancement/recipes/multiplier_netherite.json",
+          "src/main/resources/data/dimpearls/recipe/multiplier_netherite.json"
+        ]
+      },
+      "path": "~/multiplier_recipes"
+    },
+    {
+      "name": "MultiplierObsidian",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "multiplier_obsidian",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/advancement/recipes/multiplier_obsidian.json",
+          "src/main/resources/data/dimpearls/recipe/multiplier_obsidian.json"
+        ]
+      },
+      "path": "~/multiplier_recipes"
+    },
+    {
+      "name": "DecayedEndermanBehavior",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "decayed_enderman_behavior",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/rocco/dimpearls/procedures/DecayedEndermanBehaviorProcedure.java"
+        ]
+      },
+      "path": "~/entity/Decayed_Enderman"
+    },
+    {
+      "name": "DecayedEnderman",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "decayed_enderman",
+      "metadata": {
+        "files": [
+          "src/main/java/com/rocco/dimpearls/client/renderer/DecayedEndermanRenderer.java",
+          "src/main/resources/assets/dimpearls/items/decayed_enderman_spawn_egg.json",
+          "src/main/resources/data/dimpearls/neoforge/biome_modifier/decayed_enderman_biome_modifier.json",
+          "src/main/java/com/rocco/dimpearls/entity/DecayedEndermanEntity.java",
+          "src/main/resources/assets/dimpearls/models/item/decayed_enderman_spawn_egg.json"
+        ]
+      },
+      "path": "~/entity/Decayed_Enderman"
+    },
+    {
+      "name": "MultiplierGold",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "multiplier_gold",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/advancement/recipes/multiplier_gold.json",
+          "src/main/resources/data/dimpearls/recipe/multiplier_gold.json"
+        ]
+      },
+      "path": "~/multiplier_recipes"
+    },
+    {
+      "name": "MultiplierGunPowder",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "multiplier_gun_powder",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/advancement/recipes/multiplier_gun_powder.json",
+          "src/main/resources/data/dimpearls/recipe/multiplier_gun_powder.json"
+        ]
+      },
+      "path": "~/multiplier_recipes"
+    },
+    {
+      "name": "VoidPearlRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_pearl_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/recipe/void_pearl_recipe.json",
+          "src/main/resources/data/dimpearls/advancement/recipes/void_pearl_recipe.json"
+        ]
+      },
+      "path": "~/pearls/recipes"
+    },
+    {
+      "name": "EndHammer",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "end_hammer",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/advancement/recipes/end_hammer.json",
+          "src/main/resources/data/dimpearls/recipe/end_hammer.json"
+        ]
+      },
+      "path": "~/weapons/recipes"
+    },
+    {
+      "name": "BanishHammerVoid",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banish_hammer_void",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dimpearls/items/banish_hammer_void.json",
+          "src/main/java/com/rocco/dimpearls/item/BanishHammerVoidItem.java",
+          "src/main/resources/assets/dimpearls/models/item/banish_hammer_void.json"
+        ]
+      },
+      "path": "~/weapons/items"
+    },
+    {
+      "name": "BanishHammerVoidAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banish_hammer_void_attack",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/rocco/dimpearls/procedures/BanishHammerVoidAttackProcedure.java"
+        ]
+      },
+      "path": "~/weapons/functions"
+    },
+    {
+      "name": "VoidHammer",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "void_hammer",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dimpearls/advancement/recipes/void_hammer.json",
+          "src/main/resources/data/dimpearls/recipe/void_hammer.json"
+        ]
+      },
+      "path": "~/weapons/recipes"
+    },
+    {
+      "name": "Herobrine",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "herobrine",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dimpearls/models/item/herobrine_spawn_egg.json",
+          "src/main/resources/assets/dimpearls/items/herobrine_spawn_egg.json",
+          "src/main/java/com/rocco/dimpearls/client/renderer/HerobrineRenderer.java",
+          "src/main/java/com/rocco/dimpearls/entity/HerobrineEntity.java",
+          "src/main/resources/data/dimpearls/neoforge/biome_modifier/herobrine_biome_modifier.json"
+        ]
+      },
+      "path": "~/entity/Herobrine"
+    },
+    {
+      "name": "HerobrineOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "herobrine_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/rocco/dimpearls/procedures/HerobrineOnEntityTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/entity/Herobrine"
+    },
+    {
+      "name": "HerobrineSetCanSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "herobrine_set_can_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/rocco/dimpearls/procedures/HerobrineSetCanSpawnProcedure.java"
+        ]
+      },
+      "path": "~/entity/Herobrine"
+    },
+    {
+      "name": "HerobrineSpawningCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "herobrine_spawning_condition",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/rocco/dimpearls/procedures/HerobrineSpawningConditionProcedure.java"
+        ]
+      },
+      "path": "~/entity/Herobrine"
+    },
+    {
+      "name": "HerobrineEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "herobrine_entity_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/rocco/dimpearls/procedures/HerobrineEntityDiesProcedure.java"
+        ]
+      },
+      "path": "~/entity/Herobrine"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "overworldx",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "overworldy",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "overworldz",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "netherx",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "nethery",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "netherz",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "endx",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "endy",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "endz",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "herobrinespawned",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    }
+  ],
+  "sound_elements": [],
+  "tag_elements": {
+    "ITEMS:dimpearls:dirt_pearl_repair_items": [
+      "~DirtPearl@CUSTOM:DirtPearl"
+    ],
+    "ITEMS:dimpearls:nether_pearl_repair_items": [
+      "~NetherPearl@CUSTOM:NetherPearl"
+    ],
+    "ITEMS:dimpearls:end_pearl_repair_items": [
+      "~EndPearl@CUSTOM:EndPearl"
+    ],
+    "ITEMS:dimpearls:banish_hammer_nether_repair_items": [
+      "~BanishHammerNether@Items.MACE",
+      "~BanishHammerNether@CUSTOM:BanishHammerNether",
+      "~BanishHammerNether@CUSTOM:NetherPearl"
+    ],
+    "ITEMS:dimpearls:banish_hammer_end_repair_items": [
+      "~BanishHammerEnd@CUSTOM:EndPearl",
+      "~BanishHammerEnd@CUSTOM:BanishHammerEnd",
+      "~BanishHammerEnd@Items.MACE"
+    ],
+    "ITEMS:dimpearls:banish_hammer_dirt_repair_items": [
+      "~BanishHammerDirt@CUSTOM:BanishHammerDirt",
+      "~BanishHammerDirt@CUSTOM:DirtPearl",
+      "~BanishHammerDirt@Items.MACE"
+    ],
+    "ITEMS:dimpearls:banish_hammer_void_repair_items": [],
+    "ITEMS:minecraft:enchantable/durability": [
+      "~BanishHammerVoid@CUSTOM:BanishHammerVoid",
+      "~BanishHammerDirt@CUSTOM:BanishHammerDirt",
+      "~BanishHammerEnd@CUSTOM:BanishHammerEnd",
+      "~BanishHammerNether@CUSTOM:BanishHammerNether",
+      "~VoidPearl@CUSTOM:VoidPearl",
+      "~EndPearl@CUSTOM:EndPearl",
+      "~NetherPearl@CUSTOM:NetherPearl",
+      "~DirtPearl@CUSTOM:DirtPearl"
+    ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~BetweenCrystal@CUSTOM:BetweenCrystal",
+      "~Betweenstone@CUSTOM:Betweenstone"
+    ],
+    "BLOCKS:minecraft:needs_diamond_tool": [
+      "~BetweenCrystal@CUSTOM:BetweenCrystal",
+      "~Betweenstone@CUSTOM:Betweenstone"
+    ],
+    "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~TheBetween@CUSTOM:Betweenstone"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "item.dim_pearls.dirt_pearl": "Dirt Pearl",
+      "item.dim_pearls.nether_pearl": "Nether Pearl",
+      "item.dim_pearls.end_pearl": "END Pearl",
+      "item_group.dim_pearls.dimension_items": "Dimensionitems",
+      "item.dim_pearls.betweenstone": "Between Stone",
+      "item.dim_pearls.between_crystal": "Between Crystal",
+      "item.dimpearls.dirt_pearl": "Dirt Pearl",
+      "item.dimpearls.nether_pearl": "Nether Pearl",
+      "item.dimpearls.end_pearl": "END Pearl",
+      "item_group.dimpearls.dimension_items": "Dimensionitems",
+      "item.dimpearls.betweenstone": "Between Stone",
+      "item.dimpearls.between_crystal": "Between Crystal",
+      "biome.dimpearls.between_biome": "Between Biome",
+      "item.dimpearls.void_pearl": "Void Pearl",
+      "item.dimpearls.banish_hammer_nether": "Nether Banish Hammer",
+      "item.dimpearls.banish_hammer_end": "End Banish Hammer",
+      "item.dimpearls.banish_hammer_dirt": "Dirt Banish Hammer",
+      "entity.dimpearls.decayed_enderman": "Decayed Enderman",
+      "item.dimpearls.decayed_enderman_spawn_egg": "Decayed Enderman Spawn Egg",
+      "item.dimpearls.banish_hammer_void": "Void Banish Hammer",
+      "item.dimpearls.herobrine_spawn_egg": "Herobrine Spawn Egg",
+      "entity.dimpearls.herobrine": "Herobrine"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/com/rocco/dimpearls/init/DimpearlsModBlocks.java",
+      "src/main/java/com/rocco/dimpearls/init/DimpearlsModItems.java",
+      "src/main/java/com/rocco/dimpearls/init/DimpearlsModEntityRenderers.java",
+      "src/main/java/com/rocco/dimpearls/init/DimpearlsModEntities.java",
+      "src/main/java/com/rocco/dimpearls/init/DimpearlsModTabs.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/com/rocco/dimpearls/DimpearlsMod.java",
+      "src/main/java/com/rocco/dimpearls/network/DimpearlsModVariables.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/com/rocco/dimpearls/init/DimpearlsModModels.java"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "pearls",
+        "children": [
+          {
+            "name": "items",
+            "children": []
+          },
+          {
+            "name": "functions",
+            "children": []
+          },
+          {
+            "name": "recipes",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "gui",
+        "children": [
+          {
+            "name": "builtin",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "weapons",
+        "children": [
+          {
+            "name": "items",
+            "children": []
+          },
+          {
+            "name": "functions",
+            "children": []
+          },
+          {
+            "name": "recipes",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "multiplier_recipes",
+        "children": []
+      },
+      {
+        "name": "entity",
+        "children": [
+          {
+            "name": "Decayed_Enderman",
+            "children": []
+          },
+          {
+            "name": "Herobrine",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "dimension",
+        "children": [
+          {
+            "name": "the_between",
+            "children": []
+          },
+          {
+            "name": "biome",
+            "children": []
+          },
+          {
+            "name": "structures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "blocks",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "dimpearls",
+    "modName": "Dim Pearls",
+    "version": "6.2.0-mc26.1.2",
+    "description": "a mod that adds pearls that let you teleport between dimensions",
+    "author": "Rocco Stan",
+    "license": "MIT License",
+    "serverSideOnly": false,
+    "modPicture": "dirt_pearl",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-26.1.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "com.rocco.dimpearls"
+  },
+  "mcreatorVersion": 202600225619
+}

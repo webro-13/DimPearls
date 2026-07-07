@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "dimpearls:betweencrystalcluster",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 8,
+    "separation": 7,
+    "salt": 1307885533
+  }
+}

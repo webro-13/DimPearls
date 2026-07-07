@@ -1,0 +1,32 @@
+{
+  "_fv": 88,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 3,
+    "group": "",
+    "unlockingItems": [
+      "CUSTOM:BetweenCrystal",
+      "Blocks.OBSIDIAN"
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      "Blocks.OBSIDIAN",
+      "CUSTOM:BetweenCrystal",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "recipeReturnStack": "Blocks.OBSIDIAN",
+    "name": "multiplier_obsidian",
+    "namespace": "mod"
+  }
+}

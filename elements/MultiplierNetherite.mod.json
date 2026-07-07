@@ -1,0 +1,32 @@
+{
+  "_fv": 88,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 3,
+    "group": "",
+    "unlockingItems": [
+      "CUSTOM:BetweenCrystal",
+      "Blocks.ANCIENT_DEBRIS"
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      "Blocks.ANCIENT_DEBRIS",
+      "CUSTOM:BetweenCrystal",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "recipeReturnStack": "Blocks.ANCIENT_DEBRIS",
+    "name": "multiplier_netherite",
+    "namespace": "mod"
+  }
+}

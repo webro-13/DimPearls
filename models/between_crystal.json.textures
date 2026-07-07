@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "name": "default",
+      "map": {
+        "0": "between_crystal",
+        "1": "knob"
+      }
+    }
+  }
+}

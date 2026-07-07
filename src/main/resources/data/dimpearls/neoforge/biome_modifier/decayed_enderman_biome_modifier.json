@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "dimpearls:between_biome",
+  "spawners": {
+    "type": "dimpearls:decayed_enderman",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

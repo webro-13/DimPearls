@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "minecraft:mace",
+    "dimpearls:dirt_pearl"
+  ],
+  "result": {
+    "id": "dimpearls:banish_hammer_dirt",
+    "count": 1
+  }
+}

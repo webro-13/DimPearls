@@ -1,0 +1,35 @@
+{
+  "attributes": {
+    "minecraft:gameplay/water_evaporates": true,
+    "minecraft:gameplay/fast_lava": true,
+    "minecraft:gameplay/bed_rule": {
+      "can_sleep": "when_dark",
+      "can_set_spawn": "always",
+      "error_message": {
+        "translate": "block.minecraft.bed.no_sleep"
+      }
+    },
+    "minecraft:visual/fog_color": "#330033",
+    "minecraft:visual/sky_color": "#330033",
+    "minecraft:visual/sunrise_sunset_color": {
+      "modifier": "override",
+      "argument": 0
+    },
+    "minecraft:gameplay/can_start_raid": false,
+    "minecraft:gameplay/respawn_anchor_works": true
+  },
+  "has_skylight": false,
+  "has_ceiling": false,
+  "has_ender_dragon_fight": false,
+  "coordinate_scale": 1,
+  "ambient_light": 0.3,
+  "infiniburn": "#minecraft:infiniburn_overworld",
+  "timelines": "#minecraft:in_overworld",
+  "default_clock": "minecraft:overworld",
+  "min_y": 0,
+  "height": 256,
+  "logical_height": 256,
+  "monster_spawn_light_level": 0,
+  "monster_spawn_block_light_limit": 15,
+  "skybox": "end"
+}

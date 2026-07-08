@@ -1,6 +1,7 @@
 package com.rocco.dimpearls.worldgen;
 
 import com.rocco.dimpearls.DimpearlsMod;
+import com.rocco.dimpearls.init.DimpearlsModBlocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -91,7 +92,7 @@ for (int y = baseY; y < baseY + height; y++)
 
                 level.setBlock(
                     pos,
-                    DimpearlsMod.BETWEENSTONE.get()
+                    DimpearlsModBlocks.BETWEENSTONE.get()
                         .defaultBlockState(),
                     2
                 );
@@ -127,7 +128,7 @@ for (int y = baseY; y < baseY + height; y++)
             {
                 level.setBlock(
                     pos,
-                    DimpearlsMod.BETWEENCRYSTAL.get()
+                    DimpearlsModBlocks.BETWEENCRYSTAL.get()
                         .defaultBlockState(),
                     2
                 );
@@ -223,7 +224,7 @@ private static void generateIsland(
 
                     level.setBlock(
                         pos,
-                        DimpearlsMod.BETWEENSTONE.get()
+                        DimpearlsModBlocks.BETWEENSTONE.get()
                             .defaultBlockState(),
                         2
                     );

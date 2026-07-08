@@ -1,6 +1,7 @@
 package com.rocco.dimpearls.worldgen;
 
 import com.rocco.dimpearls.DimpearlsMod;
+import com.rocco.dimpearls.init.DimpearlsModBlocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -59,7 +60,7 @@ public class BetweenCrystalWorldgen
         BlockPos pos = new BlockPos(x, y, z);
 
         BlockState crystal =
-            DimpearlsMod.between_crystal.get().defaultBlockState();
+            DimpearlsModBlocks.BETWEENCRYSTAL.get().defaultBlockState();
 
         if (serverLevel.isEmptyBlock(pos))
         {

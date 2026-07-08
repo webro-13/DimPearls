@@ -26,12 +26,12 @@ public class DimpearlsModTabs {
 				tabData.accept(DimpearlsModItems.NETHER_PEARL.get());
 				tabData.accept(DimpearlsModItems.END_PEARL.get());
 				tabData.accept(DimpearlsModBlocks.BETWEENSTONE.get().asItem());
-				tabData.accept(DimpearlsModBlocks.BETWEEN_CRYSTAL.get().asItem());
 				tabData.accept(DimpearlsModItems.VOID_PEARL.get());
 				tabData.accept(DimpearlsModItems.BANISH_HAMMER_NETHER.get());
 				tabData.accept(DimpearlsModItems.BANISH_HAMMER_END.get());
 				tabData.accept(DimpearlsModItems.BANISH_HAMMER_DIRT.get());
 				tabData.accept(DimpearlsModItems.BANISH_HAMMER_VOID.get());
+				tabData.accept(DimpearlsModBlocks.BETWEENCRYSTAL.get().asItem());
 			}).build());
 
 	@SubscribeEvent

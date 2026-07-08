@@ -6,10 +6,9 @@
     "expandedPaths": [
       "[, Dim Pearls]",
       "[, Dim Pearls, Resources (Gradle)]",
-      "[, Dim Pearls, Resources (Gradle), C:\\Users\\botme\\MCreatorWorkspaces\\dim_pearls\\src\\main\\resources\\data]",
-      "[, Dim Pearls, Resources (Gradle), C:\\Users\\botme\\MCreatorWorkspaces\\dim_pearls\\src\\main\\resources\\data, C:\\Users\\botme\\MCreatorWorkspaces\\dim_pearls\\src\\main\\resources\\data\\dimpearls]",
-      "[, Dim Pearls, Resources (Gradle), C:\\Users\\botme\\MCreatorWorkspaces\\dim_pearls\\src\\main\\resources\\data, C:\\Users\\botme\\MCreatorWorkspaces\\dim_pearls\\src\\main\\resources\\data\\dimpearls, C:\\Users\\botme\\MCreatorWorkspaces\\dim_pearls\\src\\main\\resources\\data\\dimpearls\\worldgen]",
-      "[, Dim Pearls, Resources (Gradle), C:\\Users\\botme\\MCreatorWorkspaces\\dim_pearls\\src\\main\\resources\\data, C:\\Users\\botme\\MCreatorWorkspaces\\dim_pearls\\src\\main\\resources\\data\\dimpearls, C:\\Users\\botme\\MCreatorWorkspaces\\dim_pearls\\src\\main\\resources\\data\\dimpearls\\worldgen, C:\\Users\\botme\\MCreatorWorkspaces\\dim_pearls\\src\\main\\resources\\data\\dimpearls\\worldgen\\biome]"
+      "[, Dim Pearls, Resources (Gradle), D:\\mods\\dim_pearls\\src\\main\\resources\\data]",
+      "[, Dim Pearls, Resources (Gradle), D:\\mods\\dim_pearls\\src\\main\\resources\\data, D:\\mods\\dim_pearls\\src\\main\\resources\\data\\dimpearls]",
+      "[, Dim Pearls, Resources (Gradle), D:\\mods\\dim_pearls\\src\\main\\resources\\data, D:\\mods\\dim_pearls\\src\\main\\resources\\data\\dimpearls, D:\\mods\\dim_pearls\\src\\main\\resources\\data\\dimpearls\\structure]"
     ]
   },
   "leftDockState": {
@@ -22,7 +21,6 @@
     "dockSizes": {}
   },
   "bottomDockState": {
-    "expandedDock": "console",
     "dockSizes": {
       "console": 300,
       "code_viewer": 300,

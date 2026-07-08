@@ -1,0 +1,9 @@
+{
+  "parent": "dimpearls:custom/between_crystal",
+  "textures": {
+    "all": "dimpearls:block/between_crystal",
+    "particle": "dimpearls:block/between_crystal",
+    "0": "dimpearls:block/between_crystal",
+    "1": "dimpearls:block/knob"
+  }
+}

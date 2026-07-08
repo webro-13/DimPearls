@@ -1,5 +1,5 @@
 {
-  "_fv": 88,
+  "_fv": 89,
   "_type": "block",
   "definition": {
     "texture": "between_stone",
@@ -90,8 +90,8 @@
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
-    "isCustomSoundType": false,
     "soundOnStep": "STONE",
+    "isCustomSoundType": false,
     "breakSound": "",
     "fallSound": "",
     "hitSound": "",

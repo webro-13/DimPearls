@@ -24,9 +24,9 @@ public class VoidPearlCheckTpProcedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if (!((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, Identifier.parse("dimpearls:the_between")))) {
+		if (!((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, Identifier.parse("dimpearls:deleted_mod_element")))) {
 			if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
-				ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, Identifier.parse("dimpearls:the_between"));
+				ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, Identifier.parse("dimpearls:deleted_mod_element"));
 				if (_player.level().dimension() == destinationType)
 					return;
 				ServerLevel nextLevel = _serverLevel.getServer().getLevel(destinationType);

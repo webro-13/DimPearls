@@ -1,5 +1,5 @@
 {
-  "_fv": 88,
+  "_fv": 89,
   "_type": "block",
   "definition": {
     "texture": "between_crystal",
@@ -38,7 +38,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Between Crystal",
+    "name": "Betweencrystal",
     "specialInformation": {
       "fixedValue": []
     },
@@ -57,7 +57,7 @@
     "customDrop": "",
     "dropAmount": 1,
     "xpAmountMin": 0,
-    "xpAmountMax": 2,
+    "xpAmountMax": 0,
     "useLootTableForDrops": false,
     "requiresCorrectTool": true,
     "enchantPowerBonus": 0.0,
@@ -86,16 +86,16 @@
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
-    "isNotColidable": true,
-    "isCustomSoundType": false,
+    "isNotColidable": false,
     "soundOnStep": "GLASS",
+    "isCustomSoundType": false,
     "breakSound": "",
     "fallSound": "",
     "hitSound": "",
     "placeSound": "",
     "stepSound": "",
     "luminance": {
-      "fixedValue": 14.0
+      "fixedValue": 0.0
     },
     "unbreakable": false,
     "vanillaToolTier": "DIAMOND",

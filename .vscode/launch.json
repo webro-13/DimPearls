@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Client",
+      "presentation": {
+        "group": "Mod Development - dim_pearls",
+        "order": 0
+      },
+      "projectName": "dim_pearls",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@D:\\mods\\dim_pearls\\build\\moddev\\clientRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@D:\\mods\\dim_pearls\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dmcreator%%D:\\mods\\dim_pearls\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Server",
+      "presentation": {
+        "group": "Mod Development - dim_pearls",
+        "order": 1
+      },
+      "projectName": "dim_pearls",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@D:\\mods\\dim_pearls\\build\\moddev\\serverRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@D:\\mods\\dim_pearls\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dmcreator%%D:\\mods\\dim_pearls\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    }
+  ]
+}

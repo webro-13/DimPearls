@@ -12,16 +12,16 @@ import net.minecraft.world.level.block.Block;
 import java.util.function.Function;
 
 import com.rocco.dimpearls.block.BetweenstoneBlock;
-import com.rocco.dimpearls.block.BetweenCrystalBlock;
+import com.rocco.dimpearls.block.BetweencrystalBlock;
 import com.rocco.dimpearls.DimpearlsMod;
 
 public class DimpearlsModBlocks {
 	public static final DeferredRegister.Blocks REGISTRY = DeferredRegister.createBlocks(DimpearlsMod.MODID);
 	public static final DeferredBlock<Block> BETWEENSTONE;
-	public static final DeferredBlock<Block> BETWEEN_CRYSTAL;
+	public static final DeferredBlock<Block> BETWEENCRYSTAL;
 	static {
 		BETWEENSTONE = register("betweenstone", BetweenstoneBlock::new);
-		BETWEEN_CRYSTAL = register("between_crystal", BetweenCrystalBlock::new);
+		BETWEENCRYSTAL = register("betweencrystal", BetweencrystalBlock::new);
 	}
 
 	// Start of user code block custom blocks

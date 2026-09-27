@@ -36,13 +36,13 @@
       "value": -1,
       "falpha": 0.0
     },
-    "spawnEggTexture": "",
+    "spawnEggTexture": "herobrine_spawn_egg_generated",
     "creativeTabs": [
       "MISC"
     ],
     "isBoss": true,
     "bossBarColor": "BLUE",
-    "bossBarType": "NOTCHED_6",
+    "bossBarType": "NOTCHED_20",
     "equipmentMainHand": "",
     "equipmentOffHand": "",
     "equipmentHelmet": "",
@@ -59,7 +59,7 @@
     "armorBaseValue": 5.0,
     "trackingRange": 64,
     "followRange": 19,
-    "health": 20,
+    "health": 50,
     "xpAmount": 0,
     "waterMob": false,
     "breatheUnderwater": {
@@ -77,7 +77,7 @@
     "canControlStrafe": false,
     "immuneToFire": false,
     "immuneToArrows": false,
-    "immuneToFallDamage": false,
+    "immuneToFallDamage": true,
     "immuneToCactus": true,
     "immuneToDrowning": true,
     "immuneToLightning": true,

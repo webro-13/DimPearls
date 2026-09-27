@@ -6,20 +6,22 @@
       "request": "launch",
       "name": "Client",
       "presentation": {
-        "group": "Mod Development - dim_pearls",
+        "group": "Mod Development - dim_pearls1.20.1",
         "order": 0
       },
-      "projectName": "dim_pearls",
+      "projectName": "dim_pearls1.20.1",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@D:\\mods\\dim_pearls\\build\\moddev\\clientRunProgramArgs.txt"
+        "@D:\\mods\\DimPearls\\dim_pearls1.20.1\\build\\moddev\\clientRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@D:\\mods\\dim_pearls\\build\\moddev\\clientRunVmArgs.txt",
-        "-Dfml.modFolders\u003dmcreator%%D:\\mods\\dim_pearls\\bin\\main"
+        "@D:\\mods\\DimPearls\\dim_pearls1.20.1\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dmcreator%%D:\\mods\\DimPearls\\dim_pearls1.20.1\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
-      "env": {},
+      "env": {
+        "MOD_CLASSES": "mcreator%%D:\\mods\\DimPearls\\dim_pearls1.20.1\\bin\\main"
+      },
       "console": "internalConsole",
       "shortenCommandLine": "none"
     },
@@ -28,20 +30,22 @@
       "request": "launch",
       "name": "Server",
       "presentation": {
-        "group": "Mod Development - dim_pearls",
+        "group": "Mod Development - dim_pearls1.20.1",
         "order": 1
       },
-      "projectName": "dim_pearls",
+      "projectName": "dim_pearls1.20.1",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@D:\\mods\\dim_pearls\\build\\moddev\\serverRunProgramArgs.txt"
+        "@D:\\mods\\DimPearls\\dim_pearls1.20.1\\build\\moddev\\serverRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@D:\\mods\\dim_pearls\\build\\moddev\\serverRunVmArgs.txt",
-        "-Dfml.modFolders\u003dmcreator%%D:\\mods\\dim_pearls\\bin\\main"
+        "@D:\\mods\\DimPearls\\dim_pearls1.20.1\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dmcreator%%D:\\mods\\DimPearls\\dim_pearls1.20.1\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
-      "env": {},
+      "env": {
+        "MOD_CLASSES": "mcreator%%D:\\mods\\DimPearls\\dim_pearls1.20.1\\bin\\main"
+      },
       "console": "internalConsole",
       "shortenCommandLine": "none"
     }

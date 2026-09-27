@@ -1,12 +1,24 @@
 # Main Class
-net.neoforged.fml.startup.Client
+cpw.mods.bootstraplauncher.BootstrapLauncher
 
 # NeoForge Run-Type Program Arguments
+--launchTarget
+forgeclientuserdev
 --version
-26.1.2.71
+MOD_DEV
 --assetIndex
-30
+5
 --assetsDir
 C:\\Users\\botme\\.mcreator\\gradle\\caches\\neoformruntime\\assets
+--gameDir
+.
+--fml.forgeVersion
+47.4.22
+--fml.mcVersion
+1.20.1
+--fml.forgeGroup
+net.minecraftforge
+--fml.mcpVersion
+20230612.114412
 
 # User Supplied Program Arguments

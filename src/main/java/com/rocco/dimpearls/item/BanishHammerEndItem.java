@@ -1,23 +1,29 @@
 package com.rocco.dimpearls.item;
 
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.tags.TagKey;
-import net.minecraft.resources.Identifier;
-import net.minecraft.core.registries.Registries;
 
 import com.rocco.dimpearls.procedures.BanishHammerEndAttackProcedure;
+import com.rocco.dimpearls.init.DimpearlsModItems;
 
 public class BanishHammerEndItem extends Item {
-	public BanishHammerEndItem(Item.Properties properties) {
-		super(properties.rarity(Rarity.EPIC).durability(200).repairable(TagKey.create(Registries.ITEM, Identifier.parse("dimpearls:banish_hammer_end_repair_items"))));
+	public BanishHammerEndItem() {
+		super(new Item.Properties().durability(200).rarity(Rarity.EPIC));
 	}
 
 	@Override
-	public void hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
-		super.hurtEnemy(itemstack, entity, sourceentity);
-		BanishHammerEndAttackProcedure.execute(entity.level(), entity, itemstack);
+	public boolean isValidRepairItem(ItemStack itemstack, ItemStack repairitem) {
+		return Ingredient.of(new ItemStack(Blocks.AIR), new ItemStack(DimpearlsModItems.BANISH_HAMMER_END.get()), new ItemStack(DimpearlsModItems.END_PEARL.get())).test(repairitem);
+	}
+
+	@Override
+	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
+		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
+		BanishHammerEndAttackProcedure.execute(entity, itemstack);
+		return retval;
 	}
 }

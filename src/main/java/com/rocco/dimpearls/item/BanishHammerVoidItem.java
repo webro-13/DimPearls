@@ -8,13 +8,14 @@ import net.minecraft.world.entity.LivingEntity;
 import com.rocco.dimpearls.procedures.BanishHammerVoidAttackProcedure;
 
 public class BanishHammerVoidItem extends Item {
-	public BanishHammerVoidItem(Item.Properties properties) {
-		super(properties.rarity(Rarity.EPIC).durability(175));
+	public BanishHammerVoidItem() {
+		super(new Item.Properties().durability(175).rarity(Rarity.EPIC));
 	}
 
 	@Override
-	public void hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
-		super.hurtEnemy(itemstack, entity, sourceentity);
-		BanishHammerVoidAttackProcedure.execute(entity.level(), entity, itemstack);
+	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
+		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
+		BanishHammerVoidAttackProcedure.execute(entity, itemstack);
+		return retval;
 	}
 }

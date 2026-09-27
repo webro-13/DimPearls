@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "minecraft:air"
+    },
+    {
+      "item": "dimpearls:dirt_pearl"
+    }
+  ],
+  "result": {
+    "item": "dimpearls:banish_hammer_dirt",
+    "count": 1
+  }
+}

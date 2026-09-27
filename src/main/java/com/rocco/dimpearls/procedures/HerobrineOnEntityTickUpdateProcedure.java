@@ -6,7 +6,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
@@ -14,6 +13,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
@@ -38,16 +38,11 @@ public class HerobrineOnEntityTickUpdateProcedure {
 			if (ClosestEntity != null && !(entity == ClosestEntity) && !(ClosestEntity == ClosestPlayerEntity)) {
 				entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3((ClosestEntity.getX()), (ClosestEntity.getY()), (ClosestEntity.getZ() + 1)));
 				if (world instanceof ServerLevel _level) {
-					LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level, EntitySpawnReason.TRIGGERED);
-					entityToSpawn.snapTo(Vec3.atBottomCenterOf(BlockPos.containing(ClosestEntity.getX(), ClosestEntity.getY(), ClosestEntity.getZ())));;
+					LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
+					entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(ClosestEntity.getX(), ClosestEntity.getY(), ClosestEntity.getZ())));;
 					_level.addFreshEntity(entityToSpawn);
 				}
-				{
-					Entity _ent = ClosestEntity;
-					if (_ent.level() instanceof ServerLevel _serverLevel) {
-						_ent.hurtServer(_serverLevel, new DamageSource(world.holderOrThrow(DamageTypes.LIGHTNING_BOLT)), 10);
-					}
-				}
+				ClosestEntity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.LIGHTNING_BOLT)), 10);
 			}
 		}
 	}

@@ -17,9 +17,17 @@
 
   "spawners": {},
 
-  "carvers": [],
+  "carvers": {
+    "air": [],
+    "liquid": []
+  },
 
   "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
     [],
     [],
     [],

@@ -1,7 +1,6 @@
 {
   "pack": {
-    "min_format": 101.1,
-    "max_format": 101.1,
+    "pack_format": 15,
     "description": "a mod that adds pearls that let you teleport between dimensions"
   }
 }

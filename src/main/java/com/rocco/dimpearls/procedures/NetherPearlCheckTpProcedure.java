@@ -6,6 +6,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceKey;
@@ -16,8 +17,6 @@ import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
-import java.util.Set;
-
 import com.rocco.dimpearls.network.DimpearlsModVariables;
 
 public class NetherPearlCheckTpProcedure {
@@ -26,51 +25,58 @@ public class NetherPearlCheckTpProcedure {
 			return;
 		if (entity.isShiftKeyDown() && (entity.level().dimension()) == Level.NETHER) {
 			{
-				DimpearlsModVariables.PlayerVariables _vars = entity.getData(DimpearlsModVariables.PLAYER_VARIABLES);
-				_vars.netherx = entity.getX();
-				_vars.nethery = entity.getY();
-				_vars.netherz = entity.getZ();
-				_vars.markSyncDirty();
+				var _playerVars = entity.getCapability(DimpearlsModVariables.PLAYER_VARIABLES).orElse(null);
+				if (_playerVars != null) {
+					_playerVars.netherx = entity.getX();
+					_playerVars.nethery = entity.getY();
+					_playerVars.netherz = entity.getZ();
+					_playerVars.markSyncDirty();
+				}
 			}
-			if (entity instanceof ServerPlayer _player)
-				_player.sendSystemMessage(Component.literal("Nether location saved!"), false);
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal("Nether location saved!"), false);
 		} else {
 			if (!((entity.level().dimension()) == Level.NETHER)) {
-				if (entity.getData(DimpearlsModVariables.PLAYER_VARIABLES).netherx == 0 && entity.getData(DimpearlsModVariables.PLAYER_VARIABLES).nethery == 0 && entity.getData(DimpearlsModVariables.PLAYER_VARIABLES).netherz == 0) {
-					if (entity instanceof ServerPlayer _player)
-						_player.sendSystemMessage(Component.literal("No Nether location saved!"), false);
+				if (entity.getCapability(DimpearlsModVariables.PLAYER_VARIABLES).orElseGet(DimpearlsModVariables.PlayerVariables::new).netherx == 0
+						&& entity.getCapability(DimpearlsModVariables.PLAYER_VARIABLES).orElseGet(DimpearlsModVariables.PlayerVariables::new).nethery == 0
+						&& entity.getCapability(DimpearlsModVariables.PLAYER_VARIABLES).orElseGet(DimpearlsModVariables.PlayerVariables::new).netherz == 0) {
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal("No Nether location saved!"), false);
 				} else {
-					if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
+					if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
 						ResourceKey<Level> destinationType = Level.NETHER;
 						if (_player.level().dimension() == destinationType)
 							return;
-						ServerLevel nextLevel = _serverLevel.getServer().getLevel(destinationType);
+						ServerLevel nextLevel = _player.server.getLevel(destinationType);
 						if (nextLevel != null) {
 							_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-							_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), Set.of(), _player.getYRot(), _player.getXRot(), true);
+							_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
 							_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 							for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-								_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
+								_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
 							_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 						}
 					}
 					{
 						Entity _ent = entity;
-						double _tx = entity.getData(DimpearlsModVariables.PLAYER_VARIABLES).netherx;
-						double _ty = entity.getData(DimpearlsModVariables.PLAYER_VARIABLES).nethery;
-						double _tz = entity.getData(DimpearlsModVariables.PLAYER_VARIABLES).netherz;
+						double _tx = entity.getCapability(DimpearlsModVariables.PLAYER_VARIABLES).orElseGet(DimpearlsModVariables.PlayerVariables::new).netherx;
+						double _ty = entity.getCapability(DimpearlsModVariables.PLAYER_VARIABLES).orElseGet(DimpearlsModVariables.PlayerVariables::new).nethery;
+						double _tz = entity.getCapability(DimpearlsModVariables.PLAYER_VARIABLES).orElseGet(DimpearlsModVariables.PlayerVariables::new).netherz;
 						_ent.teleportTo(_tx, _ty, _tz);
 						if (_ent instanceof ServerPlayer _serverPlayer)
 							_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 					}
-					if (entity instanceof ServerPlayer _player)
-						_player.sendSystemMessage(Component.literal("Teleported to Nether!"), false);
-					if (world instanceof ServerLevel _level) {
-						itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
-						});
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal("Teleported to Nether!"), false);
+					{
+						ItemStack _ist = itemstack;
+						if (_ist.hurt(1, RandomSource.create(), null)) {
+							_ist.shrink(1);
+							_ist.setDamageValue(0);
+						}
 					}
 					if (entity instanceof Player _player)
-						_player.getCooldowns().addCooldown(itemstack, 100);
+						_player.getCooldowns().addCooldown(itemstack.getItem(), 100);
 					if (itemstack.getDamageValue() == 32) {
 						itemstack.shrink(1);
 					}

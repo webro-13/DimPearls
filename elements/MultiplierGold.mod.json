@@ -6,7 +6,6 @@
     "recipeRetstackSize": 4,
     "group": "",
     "unlockingItems": [
-      "CUSTOM:BetweenCrystal",
       "Items.GOLD_INGOT"
     ],
     "cookingBookCategory": "MISC",
@@ -16,7 +15,7 @@
     "recipeShapeless": true,
     "recipeSlots": [
       "Items.GOLD_INGOT",
-      "CUSTOM:BetweenCrystal",
+      "CUSTOM:Betweencrystal",
       "",
       "",
       "",

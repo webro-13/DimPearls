@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "dimpearls:betweenstone"
+    },
+    "title": {
+      "translate": "advancements.the_between.title"
+    },
+    "description": {
+      "translate": "advancements.the_between.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "the_between_0": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "dimpearls:the_between"
+      }
+    }
+  },
+  "parent": "dimpearls:enderman_steve"
+}

@@ -4,43 +4,49 @@ import com.rocco.dimpearls.DimpearlsMod;
 import com.rocco.dimpearls.init.DimpearlsModBlocks;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.tick.LevelTickEvent;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.Identifier;
-import net.minecraft.core.registries.Registries;
+import net.minecraft.world.level.levelgen.Heightmap;
 
-@EventBusSubscriber(modid = DimpearlsMod.MODID)
-public class BetweenCrystalWorldgen
-{
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+
+@Mod.EventBusSubscriber(modid = DimpearlsMod.MODID)
+public class BetweenCrystalWorldgen {
+
     private static int timer = 0;
 
     @SubscribeEvent
-    public static void onLevelTick(LevelTickEvent.Post event)
-    {
-        Level level = event.getLevel();
+    public static void onLevelTick(TickEvent.LevelTickEvent event) {
 
+        // Only run at the end of the level tick
+        if (event.phase != TickEvent.Phase.END)
+            return;
+
+        Level level = event.level;
+
+        // Server-side only
         if (!(level instanceof ServerLevel serverLevel))
             return;
 
         // Only run in The Between
-        // Create the ResourceKey and compare it (don't call .location())
-        ResourceKey<Level> betweenKey = ResourceKey.create(Registries.DIMENSION, 
-    Identifier.fromNamespaceAndPath(DimpearlsMod.MODID, "the_between")); 
-        // For newer mappings (1.20+), use:
-        // ResourceKey<Level> betweenKey = ResourceKey.create(Registries.DIMENSION, new ResourceLocation(DimpearlsMod.MODID, "the_between"));
+        ResourceKey<Level> betweenKey = ResourceKey.create(
+            Registries.DIMENSION,
+            new ResourceLocation(DimpearlsMod.MODID, "the_between")
+        );
 
         if (!serverLevel.dimension().equals(betweenKey))
             return;
 
         timer++;
 
-        // Run occasionally
+        // Run every 100 ticks (5 seconds)
         if (timer < 100)
             return;
 
@@ -52,7 +58,7 @@ public class BetweenCrystalWorldgen
         int z = random.nextInt(1000) - 500;
 
         int y = serverLevel.getHeight(
-            net.minecraft.world.level.levelgen.Heightmap.Types.WORLD_SURFACE,
+            Heightmap.Types.WORLD_SURFACE,
             x,
             z
         );
@@ -62,8 +68,7 @@ public class BetweenCrystalWorldgen
         BlockState crystal =
             DimpearlsModBlocks.BETWEENCRYSTAL.get().defaultBlockState();
 
-        if (serverLevel.isEmptyBlock(pos))
-        {
+        if (serverLevel.isEmptyBlock(pos)) {
             serverLevel.setBlock(pos, crystal, 3);
         }
     }

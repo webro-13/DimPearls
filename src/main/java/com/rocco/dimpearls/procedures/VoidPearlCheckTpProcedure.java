@@ -6,10 +6,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.Identifier;
 import net.minecraft.network.protocol.game.ClientboundUpdateMobEffectPacket;
 import net.minecraft.network.protocol.game.ClientboundPlayerAbilitiesPacket;
 import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
@@ -18,24 +19,22 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 
-import java.util.Set;
-
 public class VoidPearlCheckTpProcedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if (!((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, Identifier.parse("dimpearls:deleted_mod_element")))) {
-			if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
-				ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, Identifier.parse("dimpearls:deleted_mod_element"));
+		if (!((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("dimpearls:the_between")))) {
+			if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+				ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, new ResourceLocation("dimpearls:the_between"));
 				if (_player.level().dimension() == destinationType)
 					return;
-				ServerLevel nextLevel = _serverLevel.getServer().getLevel(destinationType);
+				ServerLevel nextLevel = _player.server.getLevel(destinationType);
 				if (nextLevel != null) {
 					_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-					_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), Set.of(), _player.getYRot(), _player.getXRot(), true);
+					_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
 					_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 					for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-						_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
+						_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
 					_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 				}
 			}
@@ -48,13 +47,16 @@ public class VoidPearlCheckTpProcedure {
 				if (_ent instanceof ServerPlayer _serverPlayer)
 					_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 			}
-			if (entity instanceof ServerPlayer _player)
-				_player.sendSystemMessage(Component.literal("Teleported to Between!"), false);
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal("Teleported to Between!"), false);
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack, 300);
-			if (world instanceof ServerLevel _level) {
-				itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
-				});
+				_player.getCooldowns().addCooldown(itemstack.getItem(), 300);
+			{
+				ItemStack _ist = itemstack;
+				if (_ist.hurt(1, RandomSource.create(), null)) {
+					_ist.shrink(1);
+					_ist.setDamageValue(0);
+				}
 			}
 			if (itemstack.getDamageValue() == 8) {
 				itemstack.shrink(1);

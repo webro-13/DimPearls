@@ -4,11 +4,7 @@
   "workspacePanelSortAscending": true,
   "projectBrowserState": {
     "expandedPaths": [
-      "[, Dim Pearls]",
-      "[, Dim Pearls, Resources (Gradle)]",
-      "[, Dim Pearls, Resources (Gradle), D:\\mods\\dim_pearls\\src\\main\\resources\\data]",
-      "[, Dim Pearls, Resources (Gradle), D:\\mods\\dim_pearls\\src\\main\\resources\\data, D:\\mods\\dim_pearls\\src\\main\\resources\\data\\dimpearls]",
-      "[, Dim Pearls, Resources (Gradle), D:\\mods\\dim_pearls\\src\\main\\resources\\data, D:\\mods\\dim_pearls\\src\\main\\resources\\data\\dimpearls, D:\\mods\\dim_pearls\\src\\main\\resources\\data\\dimpearls\\structure]"
+      "[, Dim Pearls]"
     ]
   },
   "leftDockState": {
@@ -21,8 +17,9 @@
     "dockSizes": {}
   },
   "bottomDockState": {
+    "expandedDock": "console",
     "dockSizes": {
-      "console": 300,
+      "console": 363,
       "code_viewer": 300,
       "debugger": 300
     }

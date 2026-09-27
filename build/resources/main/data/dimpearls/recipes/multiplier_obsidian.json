@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "dimpearls:betweencrystal"
+    }
+  ],
+  "result": {
+    "item": "minecraft:obsidian",
+    "count": 3
+  }
+}

@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT License"
+
+[[mods]]
+modId="dimpearls"
+version="7.6.0-mc1.20.1"
+displayName="Dim Pearls"
+displayURL="https://github.com/webro-13/dimpearls"
+logoFile="logo.png"
+credits="Created using mod maker MCreator"
+authors="Rocco Stan"
+description="a mod that adds pearls that let you teleport between dimensions"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.dimpearls]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

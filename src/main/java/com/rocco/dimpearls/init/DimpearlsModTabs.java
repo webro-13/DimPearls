@@ -3,11 +3,11 @@
  */
 package com.rocco.dimpearls.init;
 
-import net.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -17,10 +17,10 @@ import net.minecraft.core.registries.Registries;
 
 import com.rocco.dimpearls.DimpearlsMod;
 
-@EventBusSubscriber
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DimpearlsModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, DimpearlsMod.MODID);
-	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DIMENSION_ITEMS = REGISTRY.register("dimension_items",
+	public static final RegistryObject<CreativeModeTab> DIMENSION_ITEMS = REGISTRY.register("dimension_items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.dimpearls.dimension_items")).icon(() -> new ItemStack(DimpearlsModItems.DIRT_PEARL.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(DimpearlsModItems.DIRT_PEARL.get());
 				tabData.accept(DimpearlsModItems.NETHER_PEARL.get());

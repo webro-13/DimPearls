@@ -1,9 +1,10 @@
 {
   "parent": "dimpearls:custom/between_crystal",
   "textures": {
-    "all": "dimpearls:block/between_crystal",
-    "particle": "dimpearls:block/between_crystal",
+    "all": "dimpearls:block/cleartxt",
+    "particle": "dimpearls:block/cleartxt",
     "0": "dimpearls:block/between_crystal",
     "1": "dimpearls:block/knob"
-  }
+  },
+  "render_type": "solid"
 }

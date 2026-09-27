@@ -3,5 +3,6 @@
   "textures": {
     "all": "dimpearls:block/between_stone",
     "particle": "dimpearls:block/between_stone"
-  }
+  },
+  "render_type": "solid"
 }

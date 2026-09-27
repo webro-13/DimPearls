@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     "minecraft:ancient_debris",
-    "dimpearls:between_crystal"
+    "dimpearls:betweencrystal"
   ],
   "result": {
     "id": "minecraft:ancient_debris",

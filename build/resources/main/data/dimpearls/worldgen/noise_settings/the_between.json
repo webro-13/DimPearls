@@ -8,7 +8,7 @@
   "legacy_random_source": false,
 
   "default_block": {
-    "Name": "dimpearls:between_stone"
+    "Name": "dimpearls:betweenstone"
   },
 
   "default_fluid": {
@@ -81,7 +81,7 @@
   "surface_rule": {
     "type": "minecraft:block",
     "result_state": {
-      "Name": "dimpearls:between_stone"
+      "Name": "dimpearls:betweenstone"
     }
   },
 

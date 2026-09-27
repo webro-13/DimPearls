@@ -18,6 +18,6 @@ public class BanishHammerEndItem extends Item {
 	@Override
 	public void hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		super.hurtEnemy(itemstack, entity, sourceentity);
-		BanishHammerEndAttackProcedure.execute(entity.level(), entity, itemstack);
+		BanishHammerEndAttackProcedure.execute(entity, itemstack);
 	}
 }

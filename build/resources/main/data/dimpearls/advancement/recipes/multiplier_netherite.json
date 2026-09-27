@@ -11,16 +11,6 @@
       "conditions": {
         "items": [
           {
-            "items": "dimpearls:between_crystal"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_ingredient_1": {
-      "conditions": {
-        "items": [
-          {
             "items": "minecraft:ancient_debris"
           }
         ]
@@ -31,8 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_ingredient_0",
-      "has_ingredient_1"
+      "has_ingredient_0"
     ]
   ],
   "rewards": {

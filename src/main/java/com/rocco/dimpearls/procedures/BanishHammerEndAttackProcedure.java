@@ -1,6 +1,5 @@
 package com.rocco.dimpearls.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -18,7 +17,7 @@ import net.minecraft.core.BlockPos;
 import java.util.Set;
 
 public class BanishHammerEndAttackProcedure {
-	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
+	public static void execute(Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
@@ -34,15 +33,6 @@ public class BanishHammerEndAttackProcedure {
 					_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
 				_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 			}
-		}
-		{
-			Entity _ent = entity;
-			double _tx = (world.getLevelData().getRespawnData().pos().getX());
-			double _ty = (world.getLevelData().getRespawnData().pos().getY());
-			double _tz = (world.getLevelData().getRespawnData().pos().getZ());
-			_ent.teleportTo(_tx, _ty, _tz);
-			if (_ent instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 		}
 		if (entity instanceof Player _player)
 			_player.getCooldowns().addCooldown(itemstack, 100);

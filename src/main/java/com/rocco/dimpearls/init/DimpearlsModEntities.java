@@ -27,11 +27,13 @@ public class DimpearlsModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<DecayedEndermanEntity>> DECAYED_ENDERMAN = register("decayed_enderman",
 			EntityType.Builder.<DecayedEndermanEntity>of(DecayedEndermanEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.sized(0.6f, 1.8f));
+					.notInPeaceful().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<HerobrineEntity>> HEROBRINE = register("herobrine",
 			EntityType.Builder.<HerobrineEntity>of(HerobrineEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.ridingOffset(-0.6f).sized(0.6f, 1.8f));
+					.ridingOffset(-0.6f)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

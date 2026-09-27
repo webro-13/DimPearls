@@ -34,7 +34,7 @@ import com.rocco.dimpearls.procedures.HerobrineEntityDiesProcedure;
 import com.rocco.dimpearls.init.DimpearlsModEntities;
 
 public class HerobrineEntity extends PathfinderMob {
-	private final ServerBossEvent bossInfo = new ServerBossEvent(Mth.createInsecureUUID(this.random), this.getDisplayName(), ServerBossEvent.BossBarColor.BLUE, ServerBossEvent.BossBarOverlay.NOTCHED_6);
+	private final ServerBossEvent bossInfo = new ServerBossEvent(Mth.createInsecureUUID(this.random), this.getDisplayName(), ServerBossEvent.BossBarColor.BLUE, ServerBossEvent.BossBarOverlay.NOTCHED_20);
 
 	public HerobrineEntity(EntityType<HerobrineEntity> type, Level world) {
 		super(type, world);
@@ -69,6 +69,8 @@ public class HerobrineEntity extends PathfinderMob {
 	public boolean hurtServer(ServerLevel level, DamageSource damagesource, float amount) {
 		if (damagesource.getDirectEntity() instanceof AbstractThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud || damagesource.typeHolder().is(NeoForgeMod.POISON_DAMAGE))
 			return false;
+		if (damagesource.is(DamageTypes.FALL))
+			return false;
 		if (damagesource.is(DamageTypes.CACTUS))
 			return false;
 		if (damagesource.is(DamageTypes.DROWN))
@@ -87,7 +89,7 @@ public class HerobrineEntity extends PathfinderMob {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		HerobrineEntityDiesProcedure.execute(this.level(), this, source.getEntity());
+		HerobrineEntityDiesProcedure.execute(this.level(), source.getEntity());
 	}
 
 	@Override
@@ -133,7 +135,7 @@ public class HerobrineEntity extends PathfinderMob {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.7);
-		builder = builder.add(Attributes.MAX_HEALTH, 20);
+		builder = builder.add(Attributes.MAX_HEALTH, 50);
 		builder = builder.add(Attributes.ARMOR, 5);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 6);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 19);

@@ -8,8 +8,8 @@
       "registry_name": "dirt_pearl",
       "metadata": {
         "files": [
-          "src/main/java/com/rocco/dimpearls/item/DirtPearlItem.java",
           "src/main/resources/assets/dimpearls/models/item/dirt_pearl.json",
+          "src/main/java/com/rocco/dimpearls/item/DirtPearlItem.java",
           "src/main/resources/assets/dimpearls/items/dirt_pearl.json"
         ]
       },
@@ -119,9 +119,9 @@
       "registry_name": "end_pearl",
       "metadata": {
         "files": [
+          "src/main/java/com/rocco/dimpearls/item/EndPearlItem.java",
           "src/main/resources/assets/dimpearls/models/item/end_pearl.json",
-          "src/main/resources/assets/dimpearls/items/end_pearl.json",
-          "src/main/java/com/rocco/dimpearls/item/EndPearlItem.java"
+          "src/main/resources/assets/dimpearls/items/end_pearl.json"
         ]
       },
       "path": "~/pearls/items"
@@ -146,11 +146,11 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/dimpearls/blockstates/betweenstone.json",
-          "src/main/resources/assets/dimpearls/items/betweenstone.json",
           "src/main/resources/data/dimpearls/loot_table/blocks/betweenstone.json",
-          "src/main/resources/assets/dimpearls/models/item/betweenstone.json",
           "src/main/resources/assets/dimpearls/models/block/betweenstone.json",
-          "src/main/java/com/rocco/dimpearls/block/BetweenstoneBlock.java"
+          "src/main/resources/assets/dimpearls/items/betweenstone.json",
+          "src/main/java/com/rocco/dimpearls/block/BetweenstoneBlock.java",
+          "src/main/resources/assets/dimpearls/models/item/betweenstone.json"
         ]
       },
       "path": "~/blocks"
@@ -177,8 +177,8 @@
       "registry_name": "dirt_pearl_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dimpearls/advancement/recipes/dirt_pearl_recipe.json",
-          "src/main/resources/data/dimpearls/recipe/dirt_pearl_recipe.json"
+          "src/main/resources/data/dimpearls/recipe/dirt_pearl_recipe.json",
+          "src/main/resources/data/dimpearls/advancement/recipes/dirt_pearl_recipe.json"
         ]
       },
       "path": "~/pearls/recipes"
@@ -191,8 +191,8 @@
       "registry_name": "nether_pearl_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dimpearls/recipe/nether_pearl_recipe.json",
-          "src/main/resources/data/dimpearls/advancement/recipes/nether_pearl_recipe.json"
+          "src/main/resources/data/dimpearls/advancement/recipes/nether_pearl_recipe.json",
+          "src/main/resources/data/dimpearls/recipe/nether_pearl_recipe.json"
         ]
       },
       "path": "~/pearls/recipes"
@@ -205,8 +205,8 @@
       "registry_name": "end_pearl_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dimpearls/recipe/end_pearl_recipe.json",
-          "src/main/resources/data/dimpearls/advancement/recipes/end_pearl_recipe.json"
+          "src/main/resources/data/dimpearls/advancement/recipes/end_pearl_recipe.json",
+          "src/main/resources/data/dimpearls/recipe/end_pearl_recipe.json"
         ]
       },
       "path": "~/pearls/recipes"
@@ -284,9 +284,9 @@
       "registry_name": "banish_hammer_nether",
       "metadata": {
         "files": [
-          "src/main/java/com/rocco/dimpearls/item/BanishHammerNetherItem.java",
           "src/main/resources/assets/dimpearls/models/item/banish_hammer_nether.json",
-          "src/main/resources/assets/dimpearls/items/banish_hammer_nether.json"
+          "src/main/resources/assets/dimpearls/items/banish_hammer_nether.json",
+          "src/main/java/com/rocco/dimpearls/item/BanishHammerNetherItem.java"
         ]
       },
       "path": "~/weapons/items"
@@ -299,9 +299,9 @@
       "registry_name": "banish_hammer_end",
       "metadata": {
         "files": [
-          "src/main/java/com/rocco/dimpearls/item/BanishHammerEndItem.java",
           "src/main/resources/assets/dimpearls/items/banish_hammer_end.json",
-          "src/main/resources/assets/dimpearls/models/item/banish_hammer_end.json"
+          "src/main/resources/assets/dimpearls/models/item/banish_hammer_end.json",
+          "src/main/java/com/rocco/dimpearls/item/BanishHammerEndItem.java"
         ]
       },
       "path": "~/weapons/items"
@@ -338,8 +338,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/dimpearls/models/item/banish_hammer_dirt.json",
-          "src/main/java/com/rocco/dimpearls/item/BanishHammerDirtItem.java",
-          "src/main/resources/assets/dimpearls/items/banish_hammer_dirt.json"
+          "src/main/resources/assets/dimpearls/items/banish_hammer_dirt.json",
+          "src/main/java/com/rocco/dimpearls/item/BanishHammerDirtItem.java"
         ]
       },
       "path": "~/weapons/items"
@@ -389,8 +389,8 @@
       "registry_name": "nether_hammer",
       "metadata": {
         "files": [
-          "src/main/resources/data/dimpearls/recipe/nether_hammer.json",
-          "src/main/resources/data/dimpearls/advancement/recipes/nether_hammer.json"
+          "src/main/resources/data/dimpearls/advancement/recipes/nether_hammer.json",
+          "src/main/resources/data/dimpearls/recipe/nether_hammer.json"
         ]
       },
       "path": "~/weapons/recipes"
@@ -403,8 +403,8 @@
       "registry_name": "multiplier_diamond",
       "metadata": {
         "files": [
-          "src/main/resources/data/dimpearls/recipe/multiplier_diamond.json",
-          "src/main/resources/data/dimpearls/advancement/recipes/multiplier_diamond.json"
+          "src/main/resources/data/dimpearls/advancement/recipes/multiplier_diamond.json",
+          "src/main/resources/data/dimpearls/recipe/multiplier_diamond.json"
         ]
       },
       "path": "~/multiplier_recipes"
@@ -431,8 +431,8 @@
       "registry_name": "multiplier_obsidian",
       "metadata": {
         "files": [
-          "src/main/resources/data/dimpearls/advancement/recipes/multiplier_obsidian.json",
-          "src/main/resources/data/dimpearls/recipe/multiplier_obsidian.json"
+          "src/main/resources/data/dimpearls/recipe/multiplier_obsidian.json",
+          "src/main/resources/data/dimpearls/advancement/recipes/multiplier_obsidian.json"
         ]
       },
       "path": "~/multiplier_recipes"
@@ -480,11 +480,11 @@
       "registry_name": "decayed_enderman",
       "metadata": {
         "files": [
+          "src/main/resources/assets/dimpearls/models/item/decayed_enderman_spawn_egg.json",
           "src/main/resources/data/dimpearls/neoforge/biome_modifier/decayed_enderman_biome_modifier.json",
-          "src/main/resources/assets/dimpearls/items/decayed_enderman_spawn_egg.json",
-          "src/main/java/com/rocco/dimpearls/entity/DecayedEndermanEntity.java",
           "src/main/java/com/rocco/dimpearls/client/renderer/DecayedEndermanRenderer.java",
-          "src/main/resources/assets/dimpearls/models/item/decayed_enderman_spawn_egg.json"
+          "src/main/resources/assets/dimpearls/items/decayed_enderman_spawn_egg.json",
+          "src/main/java/com/rocco/dimpearls/entity/DecayedEndermanEntity.java"
         ]
       },
       "path": "~/entity/Decayed_Enderman"
@@ -511,8 +511,8 @@
       "registry_name": "multiplier_gun_powder",
       "metadata": {
         "files": [
-          "src/main/resources/data/dimpearls/recipe/multiplier_gun_powder.json",
-          "src/main/resources/data/dimpearls/advancement/recipes/multiplier_gun_powder.json"
+          "src/main/resources/data/dimpearls/advancement/recipes/multiplier_gun_powder.json",
+          "src/main/resources/data/dimpearls/recipe/multiplier_gun_powder.json"
         ]
       },
       "path": "~/multiplier_recipes"
@@ -539,8 +539,8 @@
       "registry_name": "end_hammer",
       "metadata": {
         "files": [
-          "src/main/resources/data/dimpearls/advancement/recipes/end_hammer.json",
-          "src/main/resources/data/dimpearls/recipe/end_hammer.json"
+          "src/main/resources/data/dimpearls/recipe/end_hammer.json",
+          "src/main/resources/data/dimpearls/advancement/recipes/end_hammer.json"
         ]
       },
       "path": "~/weapons/recipes"
@@ -554,8 +554,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/rocco/dimpearls/item/BanishHammerVoidItem.java",
-          "src/main/resources/assets/dimpearls/items/banish_hammer_void.json",
-          "src/main/resources/assets/dimpearls/models/item/banish_hammer_void.json"
+          "src/main/resources/assets/dimpearls/models/item/banish_hammer_void.json",
+          "src/main/resources/assets/dimpearls/items/banish_hammer_void.json"
         ]
       },
       "path": "~/weapons/items"
@@ -591,8 +591,8 @@
       "registry_name": "void_hammer",
       "metadata": {
         "files": [
-          "src/main/resources/data/dimpearls/advancement/recipes/void_hammer.json",
-          "src/main/resources/data/dimpearls/recipe/void_hammer.json"
+          "src/main/resources/data/dimpearls/recipe/void_hammer.json",
+          "src/main/resources/data/dimpearls/advancement/recipes/void_hammer.json"
         ]
       },
       "path": "~/weapons/recipes"
@@ -605,11 +605,11 @@
       "registry_name": "herobrine",
       "metadata": {
         "files": [
-          "src/main/java/com/rocco/dimpearls/client/renderer/HerobrineRenderer.java",
-          "src/main/resources/assets/dimpearls/items/herobrine_spawn_egg.json",
+          "src/main/resources/data/dimpearls/neoforge/biome_modifier/herobrine_biome_modifier.json",
           "src/main/java/com/rocco/dimpearls/entity/HerobrineEntity.java",
+          "src/main/java/com/rocco/dimpearls/client/renderer/HerobrineRenderer.java",
           "src/main/resources/assets/dimpearls/models/item/herobrine_spawn_egg.json",
-          "src/main/resources/data/dimpearls/neoforge/biome_modifier/herobrine_biome_modifier.json"
+          "src/main/resources/assets/dimpearls/items/herobrine_spawn_egg.json"
         ]
       },
       "path": "~/entity/Herobrine"
@@ -719,51 +719,51 @@
       "registry_name": "betweencrystal",
       "metadata": {
         "files": [
-          "src/main/resources/data/dimpearls/loot_table/blocks/betweencrystal.json",
           "src/main/resources/assets/dimpearls/items/betweencrystal.json",
-          "src/main/resources/assets/dimpearls/models/item/betweencrystal.json",
+          "src/main/java/com/rocco/dimpearls/block/BetweencrystalBlock.java",
+          "src/main/resources/data/dimpearls/loot_table/blocks/betweencrystal.json",
           "src/main/resources/assets/dimpearls/blockstates/betweencrystal.json",
           "src/main/resources/assets/dimpearls/models/block/betweencrystal.json",
-          "src/main/java/com/rocco/dimpearls/block/BetweencrystalBlock.java"
+          "src/main/resources/assets/dimpearls/models/item/betweencrystal.json"
         ]
       },
       "path": "~/blocks"
     },
     {
-      "name": "Endersteve",
+      "name": "Teleport",
       "type": "achievement",
       "compiles": true,
-      "locked_code": true,
-      "registry_name": "endersteve",
+      "locked_code": false,
+      "registry_name": "teleport",
       "metadata": {
         "files": [
-          "src/main/resources/data/dimpearls/advancement/endersteve.json"
+          "src/main/resources/data/dimpearls/advancement/teleport.json"
         ]
       },
       "path": "~/achivments"
     },
     {
-      "name": "EndermanSteve",
+      "name": "Enderman",
       "type": "achievement",
       "compiles": true,
       "locked_code": true,
-      "registry_name": "enderman_steve",
+      "registry_name": "enderman",
       "metadata": {
         "files": [
-          "src/main/resources/data/dimpearls/advancement/enderman_steve.json"
+          "src/main/resources/data/dimpearls/advancement/enderman.json"
         ]
       },
       "path": "~/achivments"
     },
     {
-      "name": "TheBetween",
+      "name": "Between",
       "type": "achievement",
       "compiles": true,
       "locked_code": true,
-      "registry_name": "the_between",
+      "registry_name": "between",
       "metadata": {
         "files": [
-          "src/main/resources/data/dimpearls/advancement/the_between.json"
+          "src/main/resources/data/dimpearls/advancement/between.json"
         ]
       },
       "path": "~/achivments"
@@ -859,10 +859,10 @@
     ],
     "ITEMS:dimpearls:banish_hammer_void_repair_items": [],
     "ITEMS:minecraft:enchantable/durability": [
+      "~BanishHammerVoid@CUSTOM:BanishHammerVoid",
+      "~BanishHammerDirt@CUSTOM:BanishHammerDirt",
       "~BanishHammerEnd@CUSTOM:BanishHammerEnd",
       "~BanishHammerNether@CUSTOM:BanishHammerNether",
-      "~BanishHammerDirt@CUSTOM:BanishHammerDirt",
-      "~BanishHammerVoid@CUSTOM:BanishHammerVoid",
       "~VoidPearl@CUSTOM:VoidPearl",
       "~EndPearl@CUSTOM:EndPearl",
       "~NetherPearl@CUSTOM:NetherPearl",
@@ -905,26 +905,25 @@
       "item.dimpearls.herobrine_spawn_egg": "Herobrine Spawn Egg",
       "entity.dimpearls.herobrine": "Herobrine",
       "item.dimpearls.betweencrystal": "Betweencrystal",
-      "advancements.endersteve.title": "Dimsteve",
-      "advancements.endersteve.descr": "get a dimpearl of anytype",
-      "advancements.enderman_steve.title": "Are you an enderman?",
-      "advancements.enderman_steve.descr": "get all dimpearls",
-      "advancements.the_between.descr": "Enter The Between",
-      "advancements.the_between.title": "The Between?"
+      "advancements.teleport.title": "Teleport!",
+      "advancements.teleport.descr": "Obtain an Enderpearl",
+      "advancements.enderman.descr": "gain any of the DimPearls",
+      "advancements.enderman.title": "Are you an Enderman?",
+      "advancements.between.descr": "\"Ender\" The Between",
+      "advancements.between.title": "The Between"
     }
   },
   "metadata": {
     "files": [
       "src/main/java/com/rocco/dimpearls/init/DimpearlsModBlocks.java",
       "src/main/java/com/rocco/dimpearls/init/DimpearlsModItems.java",
-      "src/main/java/com/rocco/dimpearls/init/DimpearlsModEntityRenderers.java",
       "src/main/java/com/rocco/dimpearls/init/DimpearlsModEntities.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/java/com/rocco/dimpearls/network/NbtArrayLists.java",
+      "src/main/java/com/rocco/dimpearls/init/DimpearlsModEntityRenderers.java",
       "src/main/resources/pack.mcmeta",
-      "src/main/java/com/rocco/dimpearls/init/DimpearlsModModels.java",
-      "src/main/java/com/rocco/dimpearls/DimpearlsMod.java",
       "src/main/java/com/rocco/dimpearls/network/DimpearlsModVariables.java",
+      "src/main/java/com/rocco/dimpearls/DimpearlsMod.java",
+      "src/main/java/com/rocco/dimpearls/init/DimpearlsModModels.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/com/rocco/dimpearls/init/DimpearlsModTabs.java"
     ]
   },
@@ -1008,7 +1007,7 @@
   "workspaceSettings": {
     "modid": "dimpearls",
     "modName": "Dim Pearls",
-    "version": "7.6.0-mc26.1.2",
+    "version": "7.6.1-mc26.2",
     "description": "a mod that adds pearls that let you teleport between dimensions",
     "author": "Rocco Stan",
     "websiteURL": "https://github.com/webro-13/dimpearls",
@@ -1019,7 +1018,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "neoforge-26.1.2",
+    "currentGenerator": "neoforge-26.2",
     "credits": "Created using mod maker MCreator",
     "modElementsPackage": "com.rocco.dimpearls"
   },

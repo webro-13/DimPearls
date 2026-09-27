@@ -17,7 +17,7 @@ import net.minecraft.core.BlockPos;
 
 public class BetweencrystalBlock extends Block {
 	public BetweencrystalBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.GLASS).strength(5f, 10f).lightLevel(blockstate -> 13).noCollision().postProcess((bs, br, bp) -> bp).emissiveRendering((bs, br, bp) -> true).isRedstoneConductor((bs, br, bp) -> false));
+		super(properties.sound(SoundType.GLASS).strength(5f, 10f).lightLevel(blockstate -> 13).noCollision().emissiveRendering(bs -> true).isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override

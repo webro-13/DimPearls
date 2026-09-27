@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "dimpearls:void_pearl"
+    },
+    "title": {
+      "translate": "advancements.between.title"
+    },
+    "description": {
+      "translate": "advancements.between.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "between_0": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "dimpearls:the_between"
+      }
+    }
+  },
+  "parent": "dimpearls:enderman"
+}

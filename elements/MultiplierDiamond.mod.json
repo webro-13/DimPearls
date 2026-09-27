@@ -6,8 +6,7 @@
     "recipeRetstackSize": 4,
     "group": "",
     "unlockingItems": [
-      "Items.DIAMOND",
-      "CUSTOM:BetweenCrystal"
+      "Items.DIAMOND"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -16,7 +15,7 @@
     "recipeShapeless": true,
     "recipeSlots": [
       "Items.DIAMOND",
-      "CUSTOM:BetweenCrystal",
+      "CUSTOM:Betweencrystal",
       "",
       "",
       "",

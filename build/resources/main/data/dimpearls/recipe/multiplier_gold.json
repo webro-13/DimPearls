@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     "minecraft:gold_ingot",
-    "dimpearls:between_crystal"
+    "dimpearls:betweencrystal"
   ],
   "result": {
     "id": "minecraft:gold_ingot",

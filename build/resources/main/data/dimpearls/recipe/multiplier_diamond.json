@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     "minecraft:diamond",
-    "dimpearls:between_crystal"
+    "dimpearls:betweencrystal"
   ],
   "result": {
     "id": "minecraft:diamond",

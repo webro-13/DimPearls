@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     "minecraft:gunpowder",
-    "dimpearls:between_crystal"
+    "dimpearls:betweencrystal"
   ],
   "result": {
     "id": "minecraft:gunpowder",

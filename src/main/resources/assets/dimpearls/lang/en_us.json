@@ -21,5 +21,11 @@
   "item.dimpearls.banish_hammer_void": "Void Banish Hammer",
   "item.dimpearls.herobrine_spawn_egg": "Herobrine Spawn Egg",
   "entity.dimpearls.herobrine": "Herobrine",
-  "item.dimpearls.betweencrystal": "Betweencrystal"
+  "item.dimpearls.betweencrystal": "Betweencrystal",
+  "advancements.endersteve.title": "Dimsteve",
+  "advancements.endersteve.descr": "get a dimpearl of anytype",
+  "advancements.enderman_steve.title": "Are you an enderman?",
+  "advancements.enderman_steve.descr": "get all dimpearls",
+  "advancements.the_between.descr": "Enter The Between",
+  "advancements.the_between.title": "The Between?"
 }

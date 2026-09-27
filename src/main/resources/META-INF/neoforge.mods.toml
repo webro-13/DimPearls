@@ -4,11 +4,11 @@ license="MIT License"
 
 [[mods]]
 modId="dimpearls"
-version="6.5.0-mc26.1.2"
+version="7.6.0-mc26.1.2"
 displayName="Dim Pearls"
-displayURL="https://mcreator.net"
+displayURL="https://github.com/webro-13/dimpearls"
 logoFile="logo.png"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
+credits="Created using mod maker MCreator"
 authors="Rocco Stan"
 description="a mod that adds pearls that let you teleport between dimensions"
 
@@ -22,7 +22,7 @@ description="a mod that adds pearls that let you teleport between dimensions"
 [[dependencies.dimpearls]]
     modId="neoforge"
     type="required"
-    versionRange="[26.1.2.71,)"
+    versionRange="[26.1.2.95,)"
     ordering="AFTER"
     side="BOTH"
 

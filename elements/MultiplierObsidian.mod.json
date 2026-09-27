@@ -6,7 +6,6 @@
     "recipeRetstackSize": 3,
     "group": "",
     "unlockingItems": [
-      "CUSTOM:BetweenCrystal",
       "Blocks.OBSIDIAN"
     ],
     "cookingBookCategory": "MISC",
@@ -16,7 +15,7 @@
     "recipeShapeless": true,
     "recipeSlots": [
       "Blocks.OBSIDIAN",
-      "CUSTOM:BetweenCrystal",
+      "CUSTOM:Betweencrystal",
       "",
       "",
       "",
